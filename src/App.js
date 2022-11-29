@@ -1,9 +1,21 @@
 import './App.css';
 import Segment from './components/Segment';
+import Modal from './components/Modal.js';
+import Backdrop from './components/Backdrop';
+import {useState} from 'react';
 
 function App() {
+  //const [ModalIsOpen, setModalIsOpen] = useState(false);
+  const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
+
+  const closeModalHandler = () => {
+    setModalIsOpen(false)
+  }
+
   return (
     <div className='main-page'>
+      { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
+      { ModalIsOpen ? <Backdrop /> : null}
 
       <h1>HI</h1>
       <Segment url={"https://www.w3schools.com/html/pic_trulli.jpg"}/>
