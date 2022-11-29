@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Segment from './components/Segment';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-page'>
+
+      <h1>HI</h1>
+      <Segment url={"https://www.w3schools.com/html/pic_trulli.jpg"}/>
+      <Segment url={"https://images.unsplash.com/photo-1508004526072-3be43a5005f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBpY3R1cmV8ZW58MHx8MHx8&w=1000&q=80"}/>
+      <Segment url={"https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000"}/>
+      <Segment url={"https://i.guim.co.uk/img/media/63de40b99577af9b867a9c57555a432632ba760b/0_266_5616_3370/master/5616.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=93458bbe24b9f88451ea08197888ab8e"}/>
+      <Segment url={"https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/pillars-of-creation-visible-and-ir-weston-westmoreland.jpg"}/>
     </div>
   );
 }
