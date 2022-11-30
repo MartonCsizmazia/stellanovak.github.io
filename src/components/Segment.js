@@ -1,5 +1,3 @@
-import '../assets/styles/segment.css';
-
 const Segment = (props) => {
 
   return (
