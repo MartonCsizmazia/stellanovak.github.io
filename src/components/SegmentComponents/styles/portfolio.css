@@ -25,7 +25,7 @@
 }
 
 .grid-item:hover .middle {
-  opacity: 0;
+  opacity: 0.2;
 }
 
 .middle {

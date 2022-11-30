@@ -2,7 +2,7 @@ import './styles/portfolio.css';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 
-const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
+let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios( first: $limit) {
     portfolioPictures{
       filename
@@ -15,8 +15,29 @@ const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
       }
     }
   }
+
 }`;
 
+//Dynamic query creator:
+HOMEPAGE_QUERY =  HOMEPAGE_QUERY.slice(0, HOMEPAGE_QUERY.length-2)
+                  + `allPortraits {
+                      portraits {
+                        filename
+                        title
+                        responsiveImage {
+                          src
+                          width
+                          height
+                        }
+                      }
+                    }`
+                  + HOMEPAGE_QUERY.slice(-2);
+                  console.log(HOMEPAGE_QUERY)
+
+// let txt1 = "marton"
+// let lastTwo = txt1.slice(-2);
+// var txt2 = txt1.slice(0, txt1.length-2) + "bar" + lastTwo;
+// console.log(txt2)
 
 const Portfolio = (props) => {
 
@@ -39,10 +60,8 @@ if (error) return "Something Bad Happened";
             <article>
               <div className="grid-item" onclick="location.href='/portraits';">
                 <div className="imagecontainer">
-                  <Image className="image" style={{
-                                                  
-                                                   }} data={picture.responsiveImage} />
-                  </div>
+                  <Image className="image" data={picture.responsiveImage} />
+                </div>
                 <div className="middle">
                   <div className="text">{picture.title}</div>
                 </div>
@@ -56,8 +75,6 @@ if (error) return "Something Bad Happened";
 
 
 const PortfolioStyles = {
-  transition: {transition: "0.3s ease-in-out"}
-
 
 };
 
