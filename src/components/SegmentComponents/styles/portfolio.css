@@ -1,0 +1,59 @@
+.card-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  margin: 0 8%;
+}
+
+.grid-item {
+  position: relative;
+  cursor: pointer;
+
+}
+
+
+
+.grid-item .imagecontainer .image img{
+  opacity: 0.5 !important;
+  transition: 0.3s ease-in-out !important;
+
+}
+
+.grid-item:hover .imagecontainer .image img{
+  transform: scale(1.1);
+  opacity: 1 !important;
+}
+
+.grid-item:hover .middle {
+  opacity: 0;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  padding: 16px 32px;
+}
+
+@media screen and (max-width: 900px) {
+  .card-holder {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+
+}
+  @media screen and (max-width: 750px) {
+    .card-holder {
+      grid-gap: 1rem;
+      margin: 0 3%;
+    }
+  }

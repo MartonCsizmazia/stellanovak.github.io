@@ -1,40 +1,27 @@
 import './App.css';
-import Segment from './components/Segment';
 import Modal from './components/Modal.js';
 import Backdrop from './components/Backdrop';
 import {useState} from 'react';
 import Portfolio from './components/SegmentComponents/Portfolio';
+import { useQuery } from "graphql-hooks";
+import { Image } from 'react-datocms';
 
 
 
-
-// const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
-//   allUploads(first: $limit) {
-//     url
-//     id
-//     filename
-
-//       responsiveImage(imgixParams: { fit: crop, w: 600, h: 300, auto: format }) {
-//         srcSet
-//         webpSrcSet
-//         sizes
-//         src
-//         width
-//         height
-//         aspectRatio
-//         alt
-//         title
-//         base64
-//       }
-
-//   }
-// }`;
+const HOMEPAGE_QUERY = `query HomePage {
+  allBackgrounds {
+    mainBackground {
+      filename
+      responsiveImage {
+        src
+        height
+        width
+      }
+    }
+  }
+}`;
 
 function App() {
-
-
-
-
   //const [ModalIsOpen, setModalIsOpen] = useState(false);
   const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
 
@@ -42,29 +29,82 @@ function App() {
     setModalIsOpen(false)
   }
 
-
+  //CMS
+  const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {
+    variables: {
+      limit: 10
+    }
+  });
+  if (loading) return "Loading...";
+  if (error) return "Something Bad Happened";
+  //CMS
 
   return (
     <div className='main-page'>
       { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
       { ModalIsOpen ? <Backdrop /> : null}
 
+      {console.log(data.allBackgrounds[0].mainBackground)}
+      <div className="">
 
+              <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
 
+      </div>
+      <div className="canvas" style={AppStyles.canvas}>
+        <div className="nametitle" style={AppStyles.nametitle}>
+          <div className="artistname" style={AppStyles.artistname}><h1 className="artistnameheader" style={AppStyles.artistnameheader}>Stella Novak</h1></div>
+          <div className="artistjob" style={AppStyles.artistjob}><h2 className="artistjobheader" style={AppStyles.artistjobheader}>PHOTOGRAPHER</h2></div>
+        </div>
 
-      <h1>HI</h1>
+        <div className="impressum">
+          @By Cs Marton, 2022
+        </div>
+      </div>
+
       <Portfolio/>
-      <Segment url={"https://www.w3schools.com/html/pic_trulli.jpg"}/>
-      <Segment url={"https://images.unsplash.com/photo-1508004526072-3be43a5005f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBpY3R1cmV8ZW58MHx8MHx8&w=1000&q=80"}/>
-      <Segment url={"https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000"}/>
-      <Segment url={"https://i.guim.co.uk/img/media/63de40b99577af9b867a9c57555a432632ba760b/0_266_5616_3370/master/5616.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=93458bbe24b9f88451ea08197888ab8e"}/>
-      <Segment url={"https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/pillars-of-creation-visible-and-ir-weston-westmoreland.jpg"}/>
-
-
     </div>
-
-
   );
 }
+
+const AppStyles = {
+    canvas: {
+      display: "block",
+      width: "100%",
+      height: "100%"
+    },
+    kidswedding: {
+      width: "100vw",
+      height: "100%"
+    },
+    artistjob: {
+      marginLeft: "0.5rem"
+    },
+    artistnameheader: {
+      marginBlockStart: "0",
+      marginBlockEnd: "0",
+      fontSize: "5vw",
+      lineHeight: "5.2vw"
+    },
+    artistjobheader: {
+      marginBlockStart: "0",
+      marginBlockEnd: "0",
+      fontSize: "2.2vw",
+      lineHeight: "2.3vw",
+      letterSpacing: "0.8vw"
+    },
+    nametitle: {
+      position: "absolute",
+      top: "40%",
+      right: "10%",
+      color: "white"
+    },
+    impressum: {
+      position: "fixed",
+      color: "white",
+      bottom: "0",
+      left: "0",
+      fontSize: "8px"
+    }
+};
 
 export default App;
