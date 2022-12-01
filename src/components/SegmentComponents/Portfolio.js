@@ -3,8 +3,8 @@ import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
-  allPortfolios( first: $limit) {
-    portfolioPictures{
+  allPortfolios(first: $limit) {
+    portfolio {
       filename
       title
       customData
@@ -12,27 +12,28 @@ let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
         src
         width
         height
+        title
       }
     }
   }
-
 }`;
 
-//Dynamic query creator:
+// // Dynamic query creator:
 HOMEPAGE_QUERY =  HOMEPAGE_QUERY.slice(0, HOMEPAGE_QUERY.length-2)
                   + `allPortraits {
-                      portraits {
+                      portrait {
                         filename
                         title
                         responsiveImage {
                           src
                           width
                           height
+                          title
                         }
                       }
                     }`
                   + HOMEPAGE_QUERY.slice(-2);
-                  console.log(HOMEPAGE_QUERY)
+                  // console.log(HOMEPAGE_QUERY)
 
 // let txt1 = "marton"
 // let lastTwo = txt1.slice(-2);
@@ -54,11 +55,12 @@ if (error) return "Something Bad Happened";
   return (
     <div className="portfolio">
       <div className="card-holder">
-        {data.allPortfolios[0].portfolioPictures
+        {data.allPortfolios[0].portfolio
           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
           .map(picture => (
-            <article>
-              <div className="grid-item" onclick="location.href='/portraits';">
+            <div key={picture.title}>
+              {/* <div className="grid-item" onClick="location.href='/portraits';"> */}
+              <div className="grid-item" >
                 <div className="imagecontainer">
                   <Image className="image" data={picture.responsiveImage} />
                 </div>
@@ -66,7 +68,7 @@ if (error) return "Something Bad Happened";
                   <div className="text">{picture.title}</div>
                 </div>
               </div>
-            </article>
+            </div>
         ))}
       </div>
     </div>

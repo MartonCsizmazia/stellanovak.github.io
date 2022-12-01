@@ -5,7 +5,7 @@ import {useState} from 'react';
 import Portfolio from './components/SegmentComponents/Portfolio';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
-
+import {Route} from 'react-router-dom';
 
 
 const HOMEPAGE_QUERY = `query HomePage {
@@ -44,11 +44,9 @@ function App() {
       { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
       { ModalIsOpen ? <Backdrop /> : null}
 
-      {console.log(data.allBackgrounds[0].mainBackground)}
+      {/* {console.log(data.allBackgrounds[0].mainBackground)} */}
       <div className="">
-
-              <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
-
+        <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
       </div>
       <div className="canvas" style={AppStyles.canvas}>
         <div className="nametitle" style={AppStyles.nametitle}>

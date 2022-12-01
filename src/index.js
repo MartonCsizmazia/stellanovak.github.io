@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
+import {BrowserRouter} from 'react-router-dom';
 
 const client = new GraphQLClient({
     url: "https://graphql.datocms.com/",
@@ -14,6 +15,8 @@ const client = new GraphQLClient({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ClientContext.Provider value={client}>
-        <App/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </ClientContext.Provider>
 );
