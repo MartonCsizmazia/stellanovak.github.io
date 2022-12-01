@@ -1,8 +1,8 @@
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 
-let HOMEPAGE_QUERY = `query HomePage() {
-  allPortraits {
+let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
+  allPortraits(first: $limit) {
     portrait {
       filename
       title
@@ -28,7 +28,16 @@ const PortfolioSubPage = (props) => {
   if (error) return "Something Bad Happened";
   //CMS
 
-  return <div>Sub page for portfolio categories</div>
+  return (
+    <div>
+      {data.allPortraits[0].portrait
+        .map(picture => (
+          <div key={picture.title}>
+              <Image className="image" data={picture.responsiveImage} />
+          </div>
+      ))}
+    </div>
+  )
 }
 
-export default PortfolioSubPage
+export default PortfolioSubPage;

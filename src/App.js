@@ -5,7 +5,7 @@ import {useState} from 'react';
 import Portfolio from './components/SegmentComponents/Portfolio';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
-import {Route} from 'react-router-dom';
+import PortfolioSubPage from './pages/PortfolioSubPage';
 
 
 const HOMEPAGE_QUERY = `query HomePage {

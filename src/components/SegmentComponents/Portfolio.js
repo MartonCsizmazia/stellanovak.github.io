@@ -2,6 +2,8 @@ import './styles/portfolio.css';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 
+
+
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios(first: $limit) {
     portfolio {
