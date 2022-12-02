@@ -8,15 +8,11 @@
 .grid-item {
   position: relative;
   cursor: pointer;
-
 }
-
-
 
 .grid-item .imagecontainer .image img{
   opacity: 0.5 !important;
   transition: 0.3s ease-in-out !important;
-
 }
 
 .grid-item:hover .imagecontainer .image img{

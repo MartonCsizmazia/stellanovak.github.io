@@ -5,8 +5,6 @@ import {useState} from 'react';
 import Portfolio from './components/SegmentComponents/Portfolio';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
-import PortfolioSubPage from './pages/PortfolioSubPage';
-
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -45,17 +43,16 @@ function App() {
       { ModalIsOpen ? <Backdrop /> : null}
 
       {/* {console.log(data.allBackgrounds[0].mainBackground)} */}
-      <div className="">
+      <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
-      </div>
-      <div className="canvas" style={AppStyles.canvas}>
-        <div className="nametitle" style={AppStyles.nametitle}>
-          <div className="artistname" style={AppStyles.artistname}><h1 className="artistnameheader" style={AppStyles.artistnameheader}>Stella Novak</h1></div>
-          <div className="artistjob" style={AppStyles.artistjob}><h2 className="artistjobheader" style={AppStyles.artistjobheader}>PHOTOGRAPHER</h2></div>
-        </div>
-
-        <div className="impressum">
-          @By Cs Marton, 2022
+        <div className="canvas" style={AppStyles.canvas}>
+          <div className="nametitle" style={AppStyles.nametitle}>
+            <div className="artistname" style={AppStyles.artistname}><h1 className="artistnameheader" style={AppStyles.artistnameheader}>Stella Novak</h1></div>
+            <div className="artistjob" style={AppStyles.artistjob}><h2 className="artistjobheader" style={AppStyles.artistjobheader}>PHOTOGRAPHER</h2></div>
+          </div>
+          <div className="impressum" style={AppStyles.impressum}>
+            @By Cs Marton, 2022
+          </div>
         </div>
       </div>
 
@@ -71,7 +68,7 @@ const AppStyles = {
       height: "100%"
     },
     kidswedding: {
-      width: "100vw",
+      width: "100vw" ,
       height: "100%"
     },
     artistjob: {
@@ -92,8 +89,8 @@ const AppStyles = {
     },
     nametitle: {
       position: "absolute",
-      top: "40%",
-      right: "10%",
+      top: "24vw",
+      right: "8vw",
       color: "white"
     },
     impressum: {

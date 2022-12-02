@@ -4,8 +4,10 @@ import './index.css';
 import App from './App';
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
 import {BrowserRouter} from 'react-router-dom';
-import { Routes, Route} from 'react-router-dom';
+import { Link, Routes, Route} from 'react-router-dom';
 import PortfolioSubPage from './pages/PortfolioSubPage';
+import Urlcollector from './components/Urlcollector';
+
 
 
 const client = new GraphQLClient({
@@ -16,12 +18,18 @@ const client = new GraphQLClient({
   });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const list = []
 root.render(
+
     <ClientContext.Provider value={client}>
+        <Urlcollector/>
         <BrowserRouter>
             <Routes>
+            {list.map(portfolio => (
+                <Route exact path={"/" + portfolio} element={<PortfolioSubPage/>}/>
+            ))}
                 <Route exact path='/' element={<App/>}/>
-                <Route exact path='/portrait' element={<PortfolioSubPage/>}/>
+                <Route exact path='/portraits' element={<PortfolioSubPage/>}/>
             </Routes>
         </BrowserRouter>
     </ClientContext.Provider>

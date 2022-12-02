@@ -1,8 +1,8 @@
 import './styles/portfolio.css';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
-
-
+import { Link } from 'react-router-dom';
+import Urlcollector from '../Urlcollector';
 
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios(first: $limit) {
@@ -62,21 +62,23 @@ if (error) return "Something Bad Happened";
           .map(picture => (
             <div key={picture.title}>
               {/* <div className="grid-item" onClick="location.href='/portraits';"> */}
-              <div className="grid-item" >
-                <div className="imagecontainer">
-                  <Image className="image" data={picture.responsiveImage} />
+              <Link to={"/"+ picture.title}>
+                <div className="grid-item">
+                  <div className="imagecontainer">
+                    <Image className="image" data={picture.responsiveImage} />
+                  </div>
+                  <div className="middle">
+                    <div className="text">{picture.title}</div>
+                    {console.log(picture.title)}
+                  </div>
                 </div>
-                <div className="middle">
-                  <div className="text">{picture.title}</div>
-                </div>
-              </div>
+              </Link>
             </div>
         ))}
       </div>
     </div>
   )
 }
-
 
 const PortfolioStyles = {
 
