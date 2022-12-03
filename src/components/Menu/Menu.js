@@ -22,15 +22,12 @@ const Menu = (props) => {
         <a language="english" href="/#portfolio" className="dropbtn page-part" >Portfolio</a>
         <a language="hungarian" href="/#portfolio" className="dropbtn page-part" >Galéria</a>
         <div className="dropdown-content">
-          {props.menuList.map(menuItem => (
-            <a href={menuItem}>{menuItem.charAt(0).toUpperCase() + menuItem.slice(1)} </a>
-          ))}
-          {/* {props.menuList.map((menuItem, i) => (
+          {props.menuList.map((menuItem, i) => (
             <Link to={"/"+ menuItem} key={i}>
               {console.log(menuItem)}
               {menuItem.charAt(0).toUpperCase() + menuItem.slice(1)}
             </Link>
-          ))} */}
+          ))}
         </div>
       </div>
       <div className="menu-title dropdown">

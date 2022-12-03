@@ -14,7 +14,6 @@ const client = new GraphQLClient({
   });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const list = []
 
 root.render(
 
@@ -29,12 +28,14 @@ root.render(
                 {/* TITLE HAS TO BE SINGULAR in Route, and CMD*/}
                 {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures CMD*/}
                 {/* Path connects to portfolo title in cmd, title connects to MODEL Id in cmd */}
-                <Route exact path='/portraits' element={<PortfolioSubPage title="portrait"/>}/>
-                <Route exact path='/weddings' element={<PortfolioSubPage title="wedding"/>}/>
-                <Route exact path='/family' element={<PortfolioSubPage title="family"/>}/>
-                <Route exact path='/animals' element={<PortfolioSubPage title="animal"/>}/>
-                <Route exact path='/landscape' element={<PortfolioSubPage title="landscape"/>}/>
-                <Route exact path='/sport' element={<PortfolioSubPage title="sport"/>}/>
+                {/* key has to be unique, in order to re-mount the component with new homepage query data */}
+                
+                <Route exact path='/portraits' element={<PortfolioSubPage title="portrait" key="1"/>}/>
+                <Route exact path='/weddings' element={<PortfolioSubPage title="wedding" key="2"/>}/>
+                <Route exact path='/family' element={<PortfolioSubPage title="family" key="3"/>}/>
+                <Route exact path='/animals' element={<PortfolioSubPage title="animal" key="4"/>}/>
+                <Route exact path='/landscape' element={<PortfolioSubPage title="landscape" key="5"/>}/>
+                <Route exact path='/sport' element={<PortfolioSubPage title="sport" key="6"/>}/>
             </Routes>
         </BrowserRouter>
     </ClientContext.Provider>

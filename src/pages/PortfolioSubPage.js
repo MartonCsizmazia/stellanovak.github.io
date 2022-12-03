@@ -4,7 +4,7 @@ import Menu from "../components/Menu/Menu";
 import {useEffect} from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
-var pluralize = require('pluralize')
+
 
 const PortfolioSubPage = (props) => {
 
@@ -12,6 +12,8 @@ const PortfolioSubPage = (props) => {
   useEffect(() => {
     setAllLanguage()
   });
+
+  let pluralize = require('pluralize')
 
   const setAllLanguage = () => {
     let elements = document.querySelectorAll('[language]');
@@ -78,9 +80,6 @@ const PortfolioSubPage = (props) => {
             columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
         >
             <Masonry gutter="1.5rem">
-                {console.log("before error")}
-                {console.log(data['all' + pluralize(upperProps.toString())])}
-                {console.log("after error")}
                 {data['all' + pluralize(upperProps.toString())][0][props.title.toString()]
                 .map((image, i) => (
                     <img
@@ -115,7 +114,6 @@ const PortfolioSubPageStyles = {
   portfolioTitle:{
     textAlign: "left",
     paddingLeft: "0",
-    // marginTop: "3vw",
     paddingBottom: "3vw",
     fontSize: "4vw",
   }
