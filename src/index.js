@@ -34,6 +34,7 @@ root.render(
                 <Route exact path='/family' element={<PortfolioSubPage title="family"/>}/>
                 <Route exact path='/animals' element={<PortfolioSubPage title="animal"/>}/>
                 <Route exact path='/landscape' element={<PortfolioSubPage title="landscape"/>}/>
+                <Route exact path='/sport' element={<PortfolioSubPage title="sport"/>}/>
             </Routes>
         </BrowserRouter>
     </ClientContext.Provider>

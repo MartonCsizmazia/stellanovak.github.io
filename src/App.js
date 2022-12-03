@@ -29,6 +29,7 @@ const HOMEPAGE_QUERY = `query HomePage {
 }`;
 
 function App() {
+  //Language settings
   useEffect(() => {
     setAllLanguage()
     console.log("useffect")
@@ -46,6 +47,7 @@ function App() {
       }
     }
   }
+
   //modal handling
   const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
 
@@ -76,7 +78,7 @@ function App() {
 
   //page rendering
   return (
-    <div className='main-page'>
+    <div style={AppStyles.pagewidth}>
 
       <Helmet>
         <title>Novák Eszter Photography</title>
@@ -116,6 +118,11 @@ function App() {
 }
 
 const AppStyles = {
+    pagewidth: {
+      maxWidth: "120rem",
+      margin: "0 auto"
+    },
+
     canvas: {
       display: "block",
       width: "100%",

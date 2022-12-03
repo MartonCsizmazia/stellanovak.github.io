@@ -1,7 +1,5 @@
 import './menu.css';
 
-
-
 const Menu = (props) => {
   function switchLang(){
     if (localStorage.getItem("language") === "hungarian"){
