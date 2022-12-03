@@ -1,24 +1,10 @@
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 
-let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
-  allPortraits(first: $limit) {
-    portrait {
-      filename
-      title
-      responsiveImage {
-        src
-        width
-        height
-        title
-      }
-    }
-  }
-}`;
-
 var pluralize = require('pluralize')
 
 const PortfolioSubPage = (props) => {
+  //dynamic query creator
   let upperProps = props.title.toString().charAt(0).toUpperCase() + props.title.slice(1)
 
   let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {

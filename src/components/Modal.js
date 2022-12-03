@@ -51,7 +51,7 @@ const ModalStyles = {
     padding: "1rem",
     textAlign: "center",
     width: "20rem",
-    zIndex: "10",
+    zIndex: "21",
     position: "fixed",
     top: "20vh",
     left: "calc(50% - 10rem)",

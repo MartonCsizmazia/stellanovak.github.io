@@ -1,7 +1,7 @@
 import './App.css';
 import Modal from './components/Modal.js';
 import Backdrop from './components/Backdrop';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import Portfolio from './components/SegmentComponents/Portfolio';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
@@ -29,11 +29,29 @@ const HOMEPAGE_QUERY = `query HomePage {
 }`;
 
 function App() {
-  //const [ModalIsOpen, setModalIsOpen] = useState(false);
+  useEffect(() => {
+    setAllLanguage()
+    console.log("useffect")
+  });
+
+  const setAllLanguage = () => {
+    let elements = document.querySelectorAll('[language]');
+
+    elements.forEach(setLanguage);
+    function setLanguage(value) {
+      if (value.getAttribute('language') !== localStorage.getItem("language")){
+        value.style.display = "none";
+      } else {
+        value.style.display = "block";
+      }
+    }
+  }
+  //modal handling
   const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
 
   const closeModalHandler = () => {
     setModalIsOpen(false)
+    setAllLanguage()
   }
 
   //CMS
@@ -46,10 +64,17 @@ function App() {
   if (error) return "Something Bad Happened";
   //CMS
 
+  //collecting portfolio titles for menu
   let portfolioTitles = data.allPortfolios[0].portfolio
                           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
                           .map(portfolioTitles =>(portfolioTitles.title))
 
+  //initialize languge
+  if (localStorage.getItem("language") == null){
+    localStorage.setItem("language", "hungarian");
+  }
+
+  //page rendering
   return (
     <div className='main-page'>
 
@@ -65,13 +90,12 @@ function App() {
         <meta name="twitter:description" content="Portfolio and introduction of professional photgrapher, Stella Novak"/>
         <meta name="twitter:image" content="about/20210312_151725_582-01-02.webp"/>
       </Helmet>
+
       { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
       { ModalIsOpen ? <Backdrop /> : null}
 
-      <Menu menuList={portfolioTitles}/>
-      { console.log(portfolioTitles)}
+      <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
 
-      {/* {console.log(data.allBackgrounds[0].mainBackground)} */}
       <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
         <div className="canvas" style={AppStyles.canvas}>
@@ -85,7 +109,8 @@ function App() {
         </div>
       </div>
 
-      <Portfolio/>
+      <Portfolio setAllLanguage={setAllLanguage}/>
+
     </div>
   );
 }

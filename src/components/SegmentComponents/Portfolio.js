@@ -2,7 +2,7 @@ import './styles/portfolio.css';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 import { Link } from 'react-router-dom';
-import Urlcollector from '../Urlcollector';
+import {useEffect} from 'react';
 
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios(first: $limit) {
@@ -20,39 +20,29 @@ let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   }
 }`;
 
-// // Dynamic query creator:
+// Dynamic query creator:
 HOMEPAGE_QUERY =  HOMEPAGE_QUERY.slice(0, HOMEPAGE_QUERY.length-2)
                   + `allPortraits {
                       portrait {
-                        filename
                         title
-                        responsiveImage {
-                          src
-                          width
-                          height
-                          title
-                        }
                       }
                     }`
                   + HOMEPAGE_QUERY.slice(-2);
-                  // console.log(HOMEPAGE_QUERY)
-
-// let txt1 = "marton"
-// let lastTwo = txt1.slice(-2);
-// var txt2 = txt1.slice(0, txt1.length-2) + "bar" + lastTwo;
-// console.log(txt2)
 
 const Portfolio = (props) => {
-
-//CMS
-const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {
-  variables: {
-    limit: 10
-  }
-});
-if (loading) return "Loading...";
-if (error) return "Something Bad Happened";
-//CMS
+  useEffect(() => {
+    props.setAllLanguage()
+  });
+  
+  //CMS
+  const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {
+    variables: {
+      limit: 10
+    }
+  });
+  if (loading) return "Loading...";
+  if (error) return "Something Bad Happened";
+  //CMS
 
   return (
     <div className="portfolio">
@@ -67,8 +57,8 @@ if (error) return "Something Bad Happened";
                     <Image className="image" data={picture.responsiveImage} />
                   </div>
                   <div className="middle">
-                    {/* <div className="text">{picture.customData.hungarian}</div> */}
-                    <div className="text">{picture.title}</div>
+                    <div language="hungarian" className="text">{picture.customData.hungarian}</div>
+                    <div language="english" className="text">{picture.title}</div>
                   </div>
                 </div>
               </Link>
