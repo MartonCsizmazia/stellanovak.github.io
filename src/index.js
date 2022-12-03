@@ -9,7 +9,6 @@ import PortfolioSubPage from './pages/PortfolioSubPage';
 import Urlcollector from './components/Urlcollector';
 
 
-
 const client = new GraphQLClient({
     url: "https://graphql.datocms.com/",
     headers: {
@@ -19,17 +18,28 @@ const client = new GraphQLClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const list = []
+
 root.render(
 
     <ClientContext.Provider value={client}>
-        <Urlcollector/>
+        {/* <Urlcollector/> */}
         <BrowserRouter>
             <Routes>
             {list.map(portfolio => (
                 <Route exact path={"/" + portfolio} element={<PortfolioSubPage/>}/>
             ))}
+
                 <Route exact path='/' element={<App/>}/>
-                <Route exact path='/portraits' element={<PortfolioSubPage/>}/>
+                {/* TITLE HAS TO BE SINGULAR in Route, and CMD*/}
+                {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures CMD*/}
+                <Route exact path='/portraits' element={<PortfolioSubPage title="portrait"/>}/>
+                <Route exact path='/weddings' element={<PortfolioSubPage title="wedding"/>}/>
+                <Route exact path='/family' element={<PortfolioSubPage title="family"/>}/>
+                <Route exact path='/animals' element={<PortfolioSubPage title="animal"/>}/>
+                <Route exact path='/landscape' element={<PortfolioSubPage title="landscape"/>}/>
+                {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures */}
+                {/* TITLE HAS TO BE SINGULAR in Route, and CMD*/}
+                {/* Path connects to portfolo title given in cmd, title connects to MODEL id in cmd */}
             </Routes>
         </BrowserRouter>
     </ClientContext.Provider>

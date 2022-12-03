@@ -1,6 +1,4 @@
 import { useQuery } from "graphql-hooks";
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios(first: $limit) {
