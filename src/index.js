@@ -28,10 +28,10 @@ root.render(
             {list.map(portfolio => (
                 <Route exact path={"/" + portfolio} element={<PortfolioSubPage/>}/>
             ))}
-
                 <Route exact path='/' element={<App/>}/>
                 {/* TITLE HAS TO BE SINGULAR in Route, and CMD*/}
                 {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures CMD*/}
+                {/* Path connects to portfolo title given in cmd, title connects to MODEL id in cmd */}
                 <Route exact path='/portraits' element={<PortfolioSubPage title="portrait"/>}/>
                 <Route exact path='/weddings' element={<PortfolioSubPage title="wedding"/>}/>
                 <Route exact path='/family' element={<PortfolioSubPage title="family"/>}/>
@@ -39,7 +39,6 @@ root.render(
                 <Route exact path='/landscape' element={<PortfolioSubPage title="landscape"/>}/>
                 {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures */}
                 {/* TITLE HAS TO BE SINGULAR in Route, and CMD*/}
-                {/* Path connects to portfolo title given in cmd, title connects to MODEL id in cmd */}
             </Routes>
         </BrowserRouter>
     </ClientContext.Provider>

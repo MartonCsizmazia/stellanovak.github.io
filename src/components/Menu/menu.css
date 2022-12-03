@@ -1,0 +1,220 @@
+#menu-bar {
+  position: fixed;
+  z-index: 1;
+  margin: 3rem 8% 3rem 3rem;
+  width: auto;
+  color: white;
+  font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
+    helvetica-w02-light, sans-serif;
+  /* font-size: 1.5rem; */
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+}
+
+.close-navbar {
+  display: none;
+  float: right;
+  margin-right: 1rem;
+  margin-top: -2rem;
+  color: white;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-navbar:hover,
+.close-navbar:focus {
+  color: rgba(68, 68, 68, 0.75);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#menu-button {
+  display: none;
+}
+
+#menu-bar a,
+i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#menu-bar a:hover {
+  color: rgba(255, 255, 255, 0.541);
+}
+
+#menu-bar i:hover {
+  color: rgba(255, 255, 255, 0.541);
+}
+
+.menu-title {
+  width: 12vw;
+}
+
+.menu-title a {
+  color: white;
+  text-decoration: none;
+  border: orange;
+  border-radius: 5px;
+}
+
+.social-media-icons {
+  display: flex;
+  width: max-content;
+}
+
+.social-media-icons div {
+  margin: 0 1rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: rgba(255, 255, 255, 0.541);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown:hover .dropbtn {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 750px) {
+  .fixed-menu-spacer {
+    width: 100%;
+    background-color: black;
+    height: 3rem;
+  }
+  #menu-button-line {
+    width: 100%;
+    background-color: #111;
+    position: fixed;
+    height: 3rem;
+    z-index: 9;
+  }
+
+  #menu-button {
+    display: block;
+    position: fixed;
+    left: 2rem;
+    color: white;
+    font-size: 2rem;
+    z-index: 10;
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+  }
+
+  .menu-button-title {
+    cursor: pointer;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  #flag{
+    width: 5rem;
+  }
+
+  #flag-picture {
+    width: 20%;
+    cursor: pointer;
+  }
+
+  /* Fixed sidenav, full height */
+  #sidenav {
+    display: block;
+    height: 100%;
+    width: 17rem;
+    position: fixed;
+    top: 0;
+    left: -17rem;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 2.5rem;
+    z-index: 11;
+  }
+
+  /* Style the sidenav links and the dropdown button */
+  #sidenav a,
+  .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .dropdown-span {
+    line-height: 2rem;
+  }
+
+  .close-navbar {
+    display: block;
+  }
+
+  .portraits-title {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .portraits-title h1 {
+    font-size: 4rem;
+  }
+
+  .active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+    height: 15rem;
+    transition: height 1s;
+  }
+
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    padding-top: 0.3rem;
+  }
+}
