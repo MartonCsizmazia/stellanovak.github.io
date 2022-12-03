@@ -11,7 +11,6 @@ const PortfolioSubPage = (props) => {
   //Language settings
   useEffect(() => {
     setAllLanguage()
-    console.log("useffect")
   });
 
   const setAllLanguage = () => {
@@ -79,6 +78,9 @@ const PortfolioSubPage = (props) => {
             columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
         >
             <Masonry gutter="1.5rem">
+                {console.log("before error")}
+                {console.log(data['all' + pluralize(upperProps.toString())])}
+                {console.log("after error")}
                 {data['all' + pluralize(upperProps.toString())][0][props.title.toString()]
                 .map((image, i) => (
                     <img

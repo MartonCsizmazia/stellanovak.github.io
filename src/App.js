@@ -32,7 +32,6 @@ function App() {
   //Language settings
   useEffect(() => {
     setAllLanguage()
-    console.log("useffect")
   });
 
   const setAllLanguage = () => {

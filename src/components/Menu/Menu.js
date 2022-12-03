@@ -1,4 +1,5 @@
 import './menu.css';
+import { Link } from 'react-router-dom';
 
 const Menu = (props) => {
   function switchLang(){
@@ -24,6 +25,12 @@ const Menu = (props) => {
           {props.menuList.map(menuItem => (
             <a href={menuItem}>{menuItem.charAt(0).toUpperCase() + menuItem.slice(1)} </a>
           ))}
+          {/* {props.menuList.map((menuItem, i) => (
+            <Link to={"/"+ menuItem} key={i}>
+              {console.log(menuItem)}
+              {menuItem.charAt(0).toUpperCase() + menuItem.slice(1)}
+            </Link>
+          ))} */}
         </div>
       </div>
       <div className="menu-title dropdown">

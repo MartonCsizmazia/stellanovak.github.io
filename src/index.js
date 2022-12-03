@@ -22,9 +22,9 @@ root.render(
         {/* <Urlcollector/> */}
         <BrowserRouter>
             <Routes>
-            {list.map(portfolio => (
+            {/* {list.map(portfolio => (
                 <Route exact path={"/" + portfolio} element={<PortfolioSubPage/>}/>
-            ))}
+            ))} */}
                 <Route exact path='/' element={<App/>}/>
                 {/* TITLE HAS TO BE SINGULAR in Route, and CMD*/}
                 {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures CMD*/}
