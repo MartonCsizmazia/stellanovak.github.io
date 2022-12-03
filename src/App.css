@@ -5,3 +5,7 @@ h3 {
     helvetica-w02-light, sans-serif;
   color: white;
 }
+
+#sidenav {
+  display: none;
+}

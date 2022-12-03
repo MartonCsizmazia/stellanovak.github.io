@@ -42,10 +42,7 @@ const Menu = (props) => {
         <a language="english" href="/#contact" >Contact</a>
         <a language="hungarian" href="/#contact" >Kapcsolat</a>
       </div>
-        <div className="menu-title" id = "flag" onClick={switchLang}>
-        {/* <%= image_tag 'flags/flag-400.png', language: "english", alt: 'Magyar nyelvű oldal', id: 'flag-picture', style: "width: 20%; cursor: pointer"%>
-        <%= image_tag 'flags/illustration-uk-flag_53876-18166.webp', language: "hungarian", alt: 'Change to english', id: 'flag-picture', style: "width: 20%; cursor: pointer"%> */}
-
+      <div className="menu-title" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
         <img language="hungarian" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>
       </div>

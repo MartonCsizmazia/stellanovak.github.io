@@ -5,6 +5,7 @@ import App from './App';
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
 import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import PortfolioSubPage from './pages/PortfolioSubPage';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const client = new GraphQLClient({
     url: "https://graphql.datocms.com/",
@@ -29,7 +30,7 @@ root.render(
                 {/* PATH HAS TO BE THE SAME AS PICTURE.TITLE in portfolio pictures CMD*/}
                 {/* Path connects to portfolo title in cmd, title connects to MODEL Id in cmd */}
                 {/* key has to be unique, in order to re-mount the component with new homepage query data */}
-                
+
                 <Route exact path='/portraits' element={<PortfolioSubPage title="portrait" key="1"/>}/>
                 <Route exact path='/weddings' element={<PortfolioSubPage title="wedding" key="2"/>}/>
                 <Route exact path='/family' element={<PortfolioSubPage title="family" key="3"/>}/>

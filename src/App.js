@@ -7,6 +7,8 @@ import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 import Menu from '../src/components/Menu/Menu'
 import { Helmet } from "react-helmet";
+import MobileMenu from './components/Menu/MobileMenu';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -77,7 +79,7 @@ function App() {
 
   //page rendering
   return (
-    <div style={AppStyles.pagewidth}>
+    <div className="pagewidth" style={AppStyles.pagewidth}>
 
       <Helmet>
         <title>Novák Eszter Photography</title>
@@ -97,6 +99,10 @@ function App() {
 
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
 
+      <ProSidebarProvider>
+        <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage}/>
+      </ProSidebarProvider>
+      
       <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
         <div className="canvas" style={AppStyles.canvas}>
