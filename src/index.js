@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
-import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route  } from 'react-router-dom';
 import PortfolioSubPage from './pages/PortfolioSubPage';
 
 
@@ -20,7 +20,7 @@ root.render(
 
     <ClientContext.Provider value={client}>
         {/* <Urlcollector/> */}
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
             {/* {list.map(portfolio => (
                 <Route exact path={"/" + portfolio} element={<PortfolioSubPage/>}/>
@@ -38,6 +38,6 @@ root.render(
                 <Route exact path='/landscape' element={<PortfolioSubPage title="landscape" key="5"/>}/>
                 <Route exact path='/sport' element={<PortfolioSubPage title="sport" key="6"/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </ClientContext.Provider>
 );

@@ -8,7 +8,7 @@ const Menu = (props) => {
     } else {
           localStorage.setItem("language", "hungarian");
     }
-    console.log(localStorage.getItem("language"))
+    // console.log(localStorage.getItem("language"))
     props.switchLang();
   }
 

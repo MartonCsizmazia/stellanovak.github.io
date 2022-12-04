@@ -82,15 +82,27 @@ const PortfolioSubPage = (props) => {
     console.log("OPEN")
   }
 
+  let subPageName = pluralize(upperProps.toString())
+
+  let hunSubPageName = ''
+  data['allPortfolios'][0]['portfolio'].forEach(category => {
+      if(category.title == subPageName){
+        hunSubPageName = category.customData.hungarian
+        return false
+      }
+  })
+  
+
 
   return (
     <div style={PortfolioSubPageStyles.subpagewidth}>
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
-      
+
       <div style={PortfolioSubPageStyles.responsiveMasonry}>
         <div style={PortfolioSubPageStyles.portfolioTitle}>
-          {window.location.pathname.toString().charAt(1).toUpperCase() + window.location.pathname.slice(2)}
+          <span language="english">{subPageName}</span>
+          <span language="hungarian">{hunSubPageName}</span>
         </div>
         <ResponsiveMasonry
             columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
@@ -108,12 +120,6 @@ const PortfolioSubPage = (props) => {
             </Masonry>
         </ResponsiveMasonry>
       </div>
-      {/* {data['all' + pluralize(upperProps.toString())][0][props.title.toString()]
-        .map(picture => (
-          <div key={picture.title}>
-              <Image className='image' data={picture.responsiveImage} />
-          </div>
-      ))} */}
     </div>
   )
 }

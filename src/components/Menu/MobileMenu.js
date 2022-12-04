@@ -31,7 +31,7 @@ function switchLang(){
   } else {
         localStorage.setItem("language", "hungarian");
   }
-  console.log(localStorage.getItem("language"))
+  // console.log(localStorage.getItem("language"))
   props.switchLang();
 }
 
@@ -66,7 +66,7 @@ let sidenavStyle = {
         <span className="close-navbar" onClick={closeMenuBar}>×</span>
 
         <a language="english" href="/" className="page-part" onClick={closeMenuBar}>Home</a>
-        <a language="hungarian" href="#home" className="page-part" onClick={closeMenuBar} >Főoldal</a>
+        <a language="hungarian" href="/" className="page-part" onClick={closeMenuBar} >Főoldal</a>
         <button className="dropdown-btn" id="portfolio-dropdown">
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfolio</span>
           <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Galéria</span>
