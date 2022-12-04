@@ -74,10 +74,11 @@ let sidenavStyle = {
         </button>
         <div className="dropdown-container">
           {props.menuList.map((menuItem, i) => (
-            <Link to={"/"+ menuItem} key={i}>
-              {menuItem.charAt(0).toUpperCase() + menuItem.slice(1)}
-            </Link>
+            <Link to={"/"+ menuItem[0]} key={i}>
 
+              <span language="english">{menuItem[0].charAt(0).toUpperCase() + menuItem[0].slice(1)}</span>
+              <span language="hungarian">{menuItem[1].charAt(0).toUpperCase() + menuItem[1].slice(1)}</span>
+            </Link>
           ))}
         </div>
         <a language="english" href="#about" className="page-part" onClick={closeMenuBar}>About me</a>

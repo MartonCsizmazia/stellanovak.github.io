@@ -30,6 +30,7 @@ const HOMEPAGE_QUERY = `query HomePage {
 }`;
 
 function App() {
+
   //Language settings
   useEffect(() => {
     setAllLanguage()
@@ -48,6 +49,7 @@ function App() {
     }
   }
 
+  //mobile menu
   const closeMenuBar = () => {
     document.getElementById("sidenav").style.transition = "1s";
     document.getElementById("sidenav").style.left = "-17rem";
@@ -57,8 +59,6 @@ function App() {
     document.getElementById("sidenav").style.transition = "1s";
     document.getElementById("sidenav").style.left = "0";
   }
-
-
 
   var portfolioCaret = document.getElementById("portfolio-dropdown-caret");
   var portfolioButtonTitle = document.getElementById("portfolio-dropdown-title");
@@ -99,9 +99,17 @@ function App() {
   //CMS
 
   //collecting portfolio titles for menu
-  let portfolioTitles = data.allPortfolios[0].portfolio
+  let engPortfolioTitles = data.allPortfolios[0].portfolio
                           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
                           .map(portfolioTitles =>(portfolioTitles.title))
+  let hunPortfolioTitles = data.allPortfolios[0].portfolio
+                          .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
+                          .map(portfolioTitles =>(portfolioTitles.customData.hungarian))
+
+  let portfolioTitles = []
+  for(let i = 0; i < engPortfolioTitles.length; i++){
+    portfolioTitles.push([engPortfolioTitles[i], hunPortfolioTitles[i]])
+  }
 
   //initialize languge
   if (localStorage.getItem("language") == null){

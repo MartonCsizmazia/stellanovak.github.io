@@ -65,9 +65,17 @@ const PortfolioSubPage = (props) => {
   //CMS
 
   //collecting portfolio titles for menu
-  let portfolioTitles = data.allPortfolios[0].portfolio
+  let engPortfolioTitles = data.allPortfolios[0].portfolio
                           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
                           .map(portfolioTitles =>(portfolioTitles.title))
+  let hunPortfolioTitles = data.allPortfolios[0].portfolio
+                          .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
+                          .map(portfolioTitles =>(portfolioTitles.customData.hungarian))
+
+  let portfolioTitles = []
+  for(let i = 0; i < engPortfolioTitles.length; i++){
+    portfolioTitles.push([engPortfolioTitles[i], hunPortfolioTitles[i]])
+  }
 
   //Handling mobile menu
   const closeMenuBar = () => {
@@ -91,7 +99,7 @@ const PortfolioSubPage = (props) => {
         return false
       }
   })
-  
+
 
 
   return (

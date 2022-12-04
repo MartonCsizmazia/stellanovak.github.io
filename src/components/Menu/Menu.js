@@ -8,7 +8,6 @@ const Menu = (props) => {
     } else {
           localStorage.setItem("language", "hungarian");
     }
-    // console.log(localStorage.getItem("language"))
     props.switchLang();
   }
 
@@ -23,8 +22,9 @@ const Menu = (props) => {
         <a language="hungarian" href="/#portfolio" className="dropbtn page-part" >Galéria</a>
         <div className="dropdown-content">
           {props.menuList.map((menuItem, i) => (
-            <Link to={"/"+ menuItem} key={i}>
-              {menuItem.charAt(0).toUpperCase() + menuItem.slice(1)}
+            <Link to={"/"+ menuItem[0]} key={i}>
+              <span language="english">{menuItem[0].charAt(0).toUpperCase() + menuItem[0].slice(1)}</span>
+              <span language="hungarian">{menuItem[1].charAt(0).toUpperCase() + menuItem[1].slice(1)}</span>
             </Link>
           ))}
         </div>
