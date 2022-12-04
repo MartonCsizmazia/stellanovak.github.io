@@ -1,8 +1,7 @@
 import { useQuery } from "graphql-hooks";
-import { HashRouter, BrowserRouter, Routes, Route, useLocation  } from 'react-router-dom';
+import { Routes, Route, useLocation  } from 'react-router-dom';
 import App from '../App';
 import PortfolioSubPage from '../pages/PortfolioSubPage';
-import reactRouterToArray from 'react-router-to-array';
 
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios(first: $limit) {
@@ -41,7 +40,6 @@ const Urlcollector = (links) => {
       picture.title
   ))
 
-
   console.log(links)
   return (
     <div>
@@ -51,10 +49,8 @@ const Urlcollector = (links) => {
       {links.map((link, i) =>
       <Route exact path={link} element={<PortfolioSubPage title={pluralize.singular(link).toLowerCase()} key={i}/>}/>
       )}
-      {links.map((link, i) =>
-      console.log(link, pluralize.singular(link), i)
-      )}
     </Routes>
+
     </div>
   )
 }

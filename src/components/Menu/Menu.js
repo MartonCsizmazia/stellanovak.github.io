@@ -18,8 +18,8 @@ const Menu = (props) => {
         <a language="hungarian" href="/" >Főoldal</a>
       </div>
       <div className="menu-title dropdown">
-        <a language="english" href="/#portfolio" className="dropbtn page-part" >Portfolio</a>
-        <a language="hungarian" href="/#portfolio" className="dropbtn page-part" >Galéria</a>
+        <a language="english" href="/" className="dropbtn page-part" >Portfolio</a>
+        <a language="hungarian" href="/" className="dropbtn page-part" >Galéria</a>
         <div className="dropdown-content">
           {props.menuList.map((menuItem, i) => (
             <Link to={"/"+ menuItem[0]} key={i}>
@@ -30,16 +30,16 @@ const Menu = (props) => {
         </div>
       </div>
       <div className="menu-title dropdown">
-        <a language="english" href="/#about" >About me</a>
-        <a language="hungarian" href="/#about" >Rólam</a>
+        <a language="english" href="/" >About me</a>
+        <a language="hungarian" href="/" >Rólam</a>
         <div className="dropdown-content" >
-          <a language="english" href="/#aknowledgements">Aknowledgements</a>
-          <a language="hungarian" href="/#aknowledgements" >Elismerések</a>
+          <a language="english" href="/">Aknowledgements</a>
+          <a language="hungarian" href="/" >Elismerések</a>
         </div>
       </div>
       <div className="menu-title">
-        <a language="english" href="/#contact" >Contact</a>
-        <a language="hungarian" href="/#contact" >Kapcsolat</a>
+        <a language="english" href="/" >Contact</a>
+        <a language="hungarian" href="/" >Kapcsolat</a>
       </div>
       <div className="menu-title" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>

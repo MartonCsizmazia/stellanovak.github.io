@@ -81,10 +81,10 @@ let sidenavStyle = {
             </Link>
           ))}
         </div>
-        <a language="english" href="#about" className="page-part" onClick={closeMenuBar}>About me</a>
-        <a language="hungarian" href="#about" className="page-part" onClick={closeMenuBar}>Rólam</a>
-        <a language="english" href="#contact" className="page-part" onClick={closeMenuBar}>Contact</a>
-        <a language="hungarian" href="#contact" className="page-part" onClick={closeMenuBar}>Kapcsolat</a>
+        <a language="english" href="" className="page-part" onClick={closeMenuBar}>About me</a>
+        <a language="hungarian" href="" className="page-part" onClick={closeMenuBar}>Rólam</a>
+        <a language="english" href="" className="page-part" onClick={closeMenuBar}>Contact</a>
+        <a language="hungarian" href="" className="page-part" onClick={closeMenuBar}>Kapcsolat</a>
         <div className= "mobile-flag" onClick={switchLang}>
           <img language="english" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
           <img language="hungarian" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>
