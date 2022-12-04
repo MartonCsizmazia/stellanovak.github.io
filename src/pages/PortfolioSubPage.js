@@ -3,6 +3,7 @@ import { Image } from 'react-datocms';
 import Menu from "../components/Menu/Menu";
 import {useEffect} from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import MobileMenu from "../components/Menu/MobileMenu";
 
 
 
@@ -68,10 +69,25 @@ const PortfolioSubPage = (props) => {
                           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
                           .map(portfolioTitles =>(portfolioTitles.title))
 
+  //Handling mobile menu
+  const closeMenuBar = () => {
+    document.getElementById("sidenav").style.transition = "1s";
+    document.getElementById("sidenav").style.left = "-17rem";
+    console.log("CLOSE")
+  }
+
+  const openMenuBar = () =>{
+    document.getElementById("sidenav").style.transition = "1s";
+    document.getElementById("sidenav").style.left = "0";
+    console.log("OPEN")
+  }
+
+
   return (
     <div style={PortfolioSubPageStyles.subpagewidth}>
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
-
+      <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
+      
       <div style={PortfolioSubPageStyles.responsiveMasonry}>
         <div style={PortfolioSubPageStyles.portfolioTitle}>
           {window.location.pathname.toString().charAt(1).toUpperCase() + window.location.pathname.slice(2)}

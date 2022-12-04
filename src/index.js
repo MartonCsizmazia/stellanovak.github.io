@@ -5,7 +5,7 @@ import App from './App';
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
 import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import PortfolioSubPage from './pages/PortfolioSubPage';
-import { ProSidebarProvider } from 'react-pro-sidebar';
+
 
 const client = new GraphQLClient({
     url: "https://graphql.datocms.com/",

@@ -8,7 +8,6 @@ import { Image } from 'react-datocms';
 import Menu from '../src/components/Menu/Menu'
 import { Helmet } from "react-helmet";
 import MobileMenu from './components/Menu/MobileMenu';
-import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -48,6 +47,38 @@ function App() {
       }
     }
   }
+
+  const closeMenuBar = () => {
+    document.getElementById("sidenav").style.transition = "1s";
+    document.getElementById("sidenav").style.left = "-17rem";
+  }
+
+  const openMenuBar = () =>{
+    document.getElementById("sidenav").style.transition = "1s";
+    document.getElementById("sidenav").style.left = "0";
+  }
+
+
+
+  var portfolioCaret = document.getElementById("portfolio-dropdown-caret");
+  var portfolioButtonTitle = document.getElementById("portfolio-dropdown-title");
+  var portfolioButton = document.getElementById("portfolio-dropdown");
+  var menuIcon = document.getElementById("menu-icon");
+  var menuButton = document.getElementById("menu-title-id");
+  var slideBar = document.getElementById("sidenav");
+  var menuButtonLine = document.getElementById("menu-button-line");
+
+  // window.onclick = function(event) {
+  //   if (event.target != slideBar
+  //     && event.target != menuButton
+  //     && event.target != menuIcon
+  //     && event.target != menuButtonLine
+  //     && event.target != portfolioButton
+  //     && event.target != portfolioButtonTitle
+  //     && event.target != portfolioCaret) {
+  //     closeMenuBar();
+  //   }
+  // }
 
   //modal handling
   const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
@@ -98,11 +129,8 @@ function App() {
       { ModalIsOpen ? <Backdrop /> : null}
 
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
+      <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
 
-      <ProSidebarProvider>
-        <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage}/>
-      </ProSidebarProvider>
-      
       <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
         <div className="canvas" style={AppStyles.canvas}>

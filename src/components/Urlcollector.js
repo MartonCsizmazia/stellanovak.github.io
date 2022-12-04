@@ -34,8 +34,6 @@ const Urlcollector = (links) => {
       picture.title
   ))
 
-  console.log(links)
-
   return links
 }
 

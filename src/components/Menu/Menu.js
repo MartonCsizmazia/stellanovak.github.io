@@ -24,7 +24,6 @@ const Menu = (props) => {
         <div className="dropdown-content">
           {props.menuList.map((menuItem, i) => (
             <Link to={"/"+ menuItem} key={i}>
-              {console.log(menuItem)}
               {menuItem.charAt(0).toUpperCase() + menuItem.slice(1)}
             </Link>
           ))}
