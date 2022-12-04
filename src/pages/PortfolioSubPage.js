@@ -91,17 +91,18 @@ const PortfolioSubPage = (props) => {
     console.log("OPEN")
   }
 
-  let subPageName = pluralize(upperProps.toString())
+  let subPageName = upperProps.toString()
+  let isCurrentPortfolioPlural = false
 
   let hunSubPageName = ''
   data['allPortfolios'][0]['portfolio'].forEach(category => {
-      if(category.title == subPageName){
-        hunSubPageName = category.customData.hungarian
-        return false
+    if(pluralize(subPageName) == pluralize(category.title)){
+      hunSubPageName = category.customData.hungarian
+      if(pluralize(subPageName) == category.title){
+        subPageName = pluralize(subPageName)
       }
+    }
   })
-
-
 
   return (
     <div style={PortfolioSubPageStyles.subpagewidth}>
