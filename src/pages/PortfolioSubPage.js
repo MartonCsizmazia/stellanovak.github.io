@@ -4,6 +4,7 @@ import Menu from "../components/Menu/Menu";
 import {useEffect} from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import MobileMenu from "../components/Menu/MobileMenu";
+import { Helmet } from "react-helmet";
 
 
 
@@ -104,6 +105,19 @@ const PortfolioSubPage = (props) => {
 
   return (
     <div style={PortfolioSubPageStyles.subpagewidth}>
+      <Helmet>
+        <title>Novák Eszter Photography</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/basic-ui-vol-2-32-px/32/ui-photo-picture-camera-512.png"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="keywords" content="fotózás, Novák Eszter, profi fotós, profi képek, photography, stella novak, photoshoot, professional photographer"/>
+        <meta name="author" content="stella novak"/>
+        <meta name="description" content="Portfolio and introduction of professional photgrapher, Stella Novak"/>
+        <meta name="og:type" content="website"/>
+        <meta name="twitter:title" content="Stella Novak Photography"/>
+        <meta name="twitter:description" content="Portfolio and introduction of professional photgrapher, Stella Novak"/>
+        <meta name="twitter:image" content="about/20210312_151725_582-01-02.webp"/>
+      </Helmet>
+
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
 
@@ -124,6 +138,7 @@ const PortfolioSubPage = (props) => {
                         style={{width: "100%", display: "block"}}
                         alt={image.title}
                     />
+
                 ))}
             </Masonry>
         </ResponsiveMasonry>
