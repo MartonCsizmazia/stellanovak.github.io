@@ -8,6 +8,7 @@ import { Image } from 'react-datocms';
 import Menu from '../src/components/Menu/Menu'
 import { Helmet } from "react-helmet";
 import MobileMenu from './components/Menu/MobileMenu';
+import Urlcollector from './components/Urlcollector';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -153,7 +154,7 @@ function App() {
       </div>
 
       <Portfolio setAllLanguage={setAllLanguage}/>
-
+      
     </div>
   );
 }
