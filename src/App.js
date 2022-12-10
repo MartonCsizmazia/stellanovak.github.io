@@ -8,7 +8,7 @@ import { Image } from 'react-datocms';
 import Menu from '../src/components/Menu/Menu'
 import { Helmet } from "react-helmet";
 import MobileMenu from './components/Menu/MobileMenu';
-import Urlcollector from './components/Urlcollector';
+import { motion } from 'framer-motion';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -119,7 +119,14 @@ function App() {
 
   //page rendering
   return (
-    <div className="pagewidth" style={AppStyles.pagewidth}>
+    <motion.div
+      className="pagewidth"
+      style={AppStyles.pagewidth}
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      exit={{opacity:0, transition: {duration: 0.9}}}
+
+    >
 
       <Helmet>
         <title>Novák Eszter Photography</title>
@@ -154,8 +161,8 @@ function App() {
       </div>
 
       <Portfolio setAllLanguage={setAllLanguage}/>
-      
-    </div>
+
+    </motion.div>
   );
 }
 

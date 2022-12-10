@@ -33,7 +33,7 @@ const Portfolio = (props) => {
   useEffect(() => {
     props.setAllLanguage()
   });
-  
+
   //CMS
   const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {
     variables: {
@@ -45,7 +45,7 @@ const Portfolio = (props) => {
   //CMS
 
   return (
-    <div className="portfolio">
+    <div style={PortfolioStyles.portfolio} className="portfolio">
       <div className="card-holder">
         {data.allPortfolios[0].portfolio
           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
@@ -70,7 +70,9 @@ const Portfolio = (props) => {
 }
 
 const PortfolioStyles = {
-
+  portfolio: {
+    marginTop: "10rem"
+  }
 };
 
 export default Portfolio;

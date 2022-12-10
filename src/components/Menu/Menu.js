@@ -14,12 +14,18 @@ const Menu = (props) => {
   return(
     <div id="menu-bar">
       <div className="menu-title">
-        <a language="english" href="/" >Home</a>
-        <a language="hungarian" href="/" >Főoldal</a>
+      <Link to={"/"}>
+        <a language="english"  >Home</a>
+        <a language="hungarian" >Főoldal</a>
+      </Link>
       </div>
       <div className="menu-title dropdown">
-        <a language="english" href="/" className="dropbtn page-part" >Portfolio</a>
-        <a language="hungarian" href="/" className="dropbtn page-part" >Galéria</a>
+        <Link to={"/"}>
+          <a language="english" className="dropbtn page-part" >Portfolio</a>
+        </Link>
+        <Link to={"/"}>
+          <a language="hungarian" className="dropbtn page-part" >Galéria</a>
+        </Link>
         <div className="dropdown-content">
           {props.menuList.map((menuItem, i) => (
             <Link to={"/"+ menuItem[0]} key={i}>

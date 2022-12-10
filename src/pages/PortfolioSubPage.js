@@ -5,7 +5,7 @@ import {useEffect} from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import MobileMenu from "../components/Menu/MobileMenu";
 import { Helmet } from "react-helmet";
-
+import { motion } from 'framer-motion';
 
 
 const PortfolioSubPage = (props) => {
@@ -105,7 +105,12 @@ const PortfolioSubPage = (props) => {
   })
 
   return (
-    <div style={PortfolioSubPageStyles.subpagewidth}>
+    <motion.div
+      style={PortfolioSubPageStyles.subpagewidth}
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      exit={{opacity:0}}
+    >
       <Helmet>
         <title>Novák Eszter Photography</title>
         <link rel="icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/basic-ui-vol-2-32-px/32/ui-photo-picture-camera-512.png"/>
@@ -144,7 +149,7 @@ const PortfolioSubPage = (props) => {
             </Masonry>
         </ResponsiveMasonry>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
