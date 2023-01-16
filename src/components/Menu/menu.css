@@ -212,7 +212,7 @@ i {
     display: none;
     background-color: #262626;
     padding-left: 8px;
-    height: 15rem;
+    /* height: 15rem; */
     transition: height 1s;
   }
 
