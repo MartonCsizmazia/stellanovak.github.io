@@ -6,7 +6,7 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import MobileMenu from "../components/Menu/MobileMenu";
 import { Helmet } from "react-helmet";
 import { motion } from 'framer-motion';
-
+import './portfoliosubpage.css';
 
 const PortfolioSubPage = (props) => {
 
@@ -143,6 +143,7 @@ const PortfolioSubPage = (props) => {
                         src={image.responsiveImage.src}
                         style={{width: "100%", display: "block"}}
                         alt={image.title}
+                        className={"subPageImage"}
                     />
 
                 ))}

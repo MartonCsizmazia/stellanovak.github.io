@@ -155,14 +155,15 @@ function App() {
             <div className="artistname" style={AppStyles.artistname}><h1 className="artistnameheader" style={AppStyles.artistnameheader}>Stella Novak</h1></div>
             <div className="artistjob" style={AppStyles.artistjob}><h2 className="artistjobheader" style={AppStyles.artistjobheader}>PHOTOGRAPHER</h2></div>
           </div>
-          <div className="impressum" style={AppStyles.impressum}>
-            @By Cs Marton, 2022
-          </div>
+
         </div>
       </div>
       <a id="portfolio" ></a>
       <Portfolio setAllLanguage={setAllLanguage}/>
       <a id="services" ></a>
+      <div className="impressum" style={AppStyles.impressum}>
+            @By Cs Marton, 2022
+          </div>
     </motion.div>
   );
 }
@@ -205,7 +206,7 @@ const AppStyles = {
       color: "white"
     },
     impressum: {
-      position: "fixed",
+      position: "bottom",
       color: "white",
       bottom: "0",
       left: "0",
