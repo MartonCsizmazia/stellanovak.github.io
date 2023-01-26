@@ -61,7 +61,7 @@ const PortfolioSubPage = (props) => {
       limit: 10
     }
   });
-  if (loading) return "Loading...";
+  if (loading) return ""; //return "Loading..."
   if (error) return "Something Bad Happened";
   //CMS
 

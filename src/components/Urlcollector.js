@@ -2,6 +2,7 @@ import { useQuery } from "graphql-hooks";
 import { Routes, Route, useLocation  } from 'react-router-dom';
 import App from '../App';
 import PortfolioSubPage from '../pages/PortfolioSubPage';
+import Services from "../pages/Services";
 
 let HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allPortfolios(first: $limit) {
@@ -30,7 +31,7 @@ const Urlcollector = (links) => {
       limit: 10
     }
   });
-  if (loading) return "Loading...";
+  if (loading) return ""; //return "Loading..."
   if (error) return "Something Bad Happened";
   //CMS
 
@@ -43,12 +44,14 @@ const Urlcollector = (links) => {
   console.log(links)
   return (
     <div>
-
+      
     <Routes location={location} key={location.pathname}>
       <Route exact path='/' element={<App/>}/>
+      <Route exact path='/portfolio' element={<App/>}/>
       {links.map((link, i) =>
       <Route exact path={link} element={<PortfolioSubPage title={pluralize.singular(link).toLowerCase()} key={i}/>}/>
       )}
+      <Route exact path='/services' element={<Services/>}/>
     </Routes>
 
     </div>

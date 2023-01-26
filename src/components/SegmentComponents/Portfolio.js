@@ -40,12 +40,16 @@ const Portfolio = (props) => {
       limit: 10
     }
   });
-  if (loading) return "Loading...";
+  if (loading) return ""; //return "Loading..."
   if (error) return "Something Bad Happened";
   //CMS
 
   return (
     <div style={PortfolioStyles.portfolio} className="portfolio">
+      <div style={PortfolioStyles.portfolioTitleContainer}>
+        <h1 language="hungarian" style={PortfolioStyles.portfolioTitle}> Portfólió </h1>
+        <h1 language="english" style={PortfolioStyles.portfolioTitle}> Portfolio </h1>
+      </div>
       <div className="card-holder">
         {data.allPortfolios[0].portfolio
           .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
@@ -65,6 +69,7 @@ const Portfolio = (props) => {
             </div>
         ))}
       </div>
+      
     </div>
   )
 }
@@ -72,6 +77,17 @@ const Portfolio = (props) => {
 const PortfolioStyles = {
   portfolio: {
     marginTop: "10rem"
+  },
+
+  portfolioTitleContainer: {
+    margin: "7% 0 2.5% 0",
+    paddingLeft: "0"
+  },
+
+  portfolioTitle: {
+    fontSize: "4rem",
+    textAlign: "left",
+    marginLeft: "8%"
   }
 };
 

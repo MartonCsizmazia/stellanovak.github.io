@@ -1,6 +1,6 @@
 import './menu.css';
 import { Link } from 'react-router-dom';
-
+import { HashLink } from 'react-router-hash-link';
 const Menu = (props) => {
   function switchLang(){
     if (localStorage.getItem("language") === "hungarian"){
@@ -14,18 +14,32 @@ const Menu = (props) => {
   return(
     <div id="menu-bar">
       <div className="menu-title">
-      <Link to={"/"}>
+      <Link smooth to={"/"}>
         <a language="english"  >Home</a>
         <a language="hungarian" >Főoldal</a>
       </Link>
       </div>
       <div className="menu-title dropdown">
         <Link to={"/"}>
-          <a language="english" className="dropbtn page-part" >Portfolio</a>
+          <a language="english" href="/" >About me</a>
+          <a language="hungarian" href="/" >Rólam</a>
         </Link>
-        <Link to={"/"}>
-          <a language="hungarian" className="dropbtn page-part" >Galéria</a>
-        </Link>
+        <div className="dropdown-content" >
+          <Link to={"/"}>
+            <a language="english" href="/">Aknowledgements</a>
+            <a language="hungarian" href="/" >Elismerések</a>
+          </Link>
+        </div>
+      </div>
+      <div className="menu-title dropdown">
+        <HashLink smooth to="/#portfolio">
+          <span language="english" className="dropbtn page-part" >Portfolio</span>
+          <span language="hungarian" className="dropbtn page-part" >Portfólió</span>
+        </HashLink>
+
+        {/* <a language="english" href="#portfolio" class="dropbtn page-part" >Portfolio</a>
+        <a language="hungarian" href="#portfolio" class="dropbtn page-part" >Portfólió</a> */}
+
         <div className="dropdown-content">
           {props.menuList.map((menuItem, i) => (
             <Link to={"/"+ menuItem[0]} key={i}>
@@ -35,17 +49,17 @@ const Menu = (props) => {
           ))}
         </div>
       </div>
-      <div className="menu-title dropdown">
-        <a language="english" href="/" >About me</a>
-        <a language="hungarian" href="/" >Rólam</a>
-        <div className="dropdown-content" >
-          <a language="english" href="/">Aknowledgements</a>
-          <a language="hungarian" href="/" >Elismerések</a>
-        </div>
+      <div className="menu-title">
+        <HashLink smooth to={"/#services"}>
+          <a language="english" >Services</a>
+          <a language="hungarian"  >Szolgáltatások</a>
+        </HashLink>
       </div>
       <div className="menu-title">
-        <a language="english" href="/" >Contact</a>
-        <a language="hungarian" href="/" >Kapcsolat</a>
+        <Link to={"/"}>
+          <a language="english"  >Contact</a>
+          <a language="hungarian"  >Kapcsolat</a>
+        </Link>
       </div>
       <div className="menu-title" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>

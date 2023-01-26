@@ -9,6 +9,7 @@ import Menu from '../src/components/Menu/Menu'
 import { Helmet } from "react-helmet";
 import MobileMenu from './components/Menu/MobileMenu';
 import { motion } from 'framer-motion';
+import $ from 'jquery';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -82,12 +83,12 @@ function App() {
   // }
 
   //modal handling
-  const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
+  // const [ModalIsOpen, setModalIsOpen] = useState((localStorage.getItem("language") == null) ? true : false);
 
-  const closeModalHandler = () => {
-    setModalIsOpen(false)
-    setAllLanguage()
-  }
+  // const closeModalHandler = () => {
+  //   setModalIsOpen(false)
+  //   setAllLanguage()
+  // }
 
   //CMS
   const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {
@@ -95,7 +96,7 @@ function App() {
       limit: 10
     }
   });
-  if (loading) return "Loading...";
+  if (loading) return ""; //return "Loading..."
   if (error) return "Something Bad Happened";
   //CMS
 
@@ -141,8 +142,8 @@ function App() {
         <meta name="twitter:image" content="about/20210312_151725_582-01-02.webp"/>
       </Helmet>
 
-      { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
-      { ModalIsOpen ? <Backdrop /> : null}
+      {/* { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
+      { ModalIsOpen ? <Backdrop /> : null} */}
 
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
@@ -159,9 +160,9 @@ function App() {
           </div>
         </div>
       </div>
-
+      <a id="portfolio" ></a>
       <Portfolio setAllLanguage={setAllLanguage}/>
-
+      <a id="services" ></a>
     </motion.div>
   );
 }

@@ -183,7 +183,7 @@ i {
     outline: none;
   }
   .dropdown-span {
-    line-height: 2rem;
+    /* line-height: 2rem; */
   }
 
   .close-navbar {

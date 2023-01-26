@@ -64,12 +64,18 @@ let sidenavStyle = {
 
       <div id="sidenav" style={sidenavStyle}>
         <span className="close-navbar" onClick={closeMenuBar}>×</span>
+        <Link to={"/"}>
+          <span language="english" className="page-part" onClick={closeMenuBar}>Home</span>
+          <span language="hungarian" className="page-part" onClick={closeMenuBar} >Főoldal</span>
+        </Link>
 
-        <a language="english" href="/" className="page-part" onClick={closeMenuBar}>Home</a>
-        <a language="hungarian" href="/" className="page-part" onClick={closeMenuBar} >Főoldal</a>
+        <Link to={"/"}>
+          <span language="english" className="page-part" onClick={closeMenuBar}>About me</span>
+          <span language="hungarian" className="page-part" onClick={closeMenuBar}>Rólam</span>
+        </Link>
         <button className="dropdown-btn" id="portfolio-dropdown">
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfolio</span>
-          <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Galéria</span>
+          <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfólió</span>
           <i className="fa fa-caret-down" id="portfolio-dropdown-caret"></i>
         </button>
         <div className="dropdown-container">
@@ -81,10 +87,18 @@ let sidenavStyle = {
             </Link>
           ))}
         </div>
-        <a language="english" href="" className="page-part" onClick={closeMenuBar}>About me</a>
-        <a language="hungarian" href="" className="page-part" onClick={closeMenuBar}>Rólam</a>
-        <a language="english" href="" className="page-part" onClick={closeMenuBar}>Contact</a>
-        <a language="hungarian" href="" className="page-part" onClick={closeMenuBar}>Kapcsolat</a>
+
+        <Link to={"/services"}>
+          <span language="english" className="page-part" onClick={closeMenuBar}>Services</span>
+          <span language="hungarian" className="page-part" onClick={closeMenuBar}>Szolgáltatások</span>
+        </Link>
+
+
+        <Link to={"/"}>
+          <span language="english" className="page-part" onClick={closeMenuBar}>Contact</span>
+          <span language="hungarian" className="page-part" onClick={closeMenuBar}>Kapcsolat</span>
+        </Link>
+
         <div className= "mobile-flag" onClick={switchLang}>
           <img language="english" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
           <img language="hungarian" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>
