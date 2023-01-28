@@ -38,18 +38,20 @@ const Urlcollector = (links) => {
   links = data.allPortfolios[0].portfolio
     .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
     .map(picture => (
+      //picture.title.replace(/\s+/g, '')
       picture.title
   ))
-
   console.log(links)
   return (
     <div>
-      
+
     <Routes location={location} key={location.pathname}>
       <Route exact path='/' element={<App/>}/>
       <Route exact path='/portfolio' element={<App/>}/>
       {links.map((link, i) =>
-      <Route exact path={link} element={<PortfolioSubPage title={pluralize.singular(link).toLowerCase()} key={i}/>}/>
+
+        <Route exact path={link} element={<PortfolioSubPage title={pluralize.singular(link).toLowerCase()} key={i}/>}/>
+
       )}
       <Route exact path='/services' element={<Services/>}/>
     </Routes>

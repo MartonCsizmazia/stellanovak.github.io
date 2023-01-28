@@ -69,7 +69,7 @@ const Portfolio = (props) => {
             </div>
         ))}
       </div>
-      
+
     </div>
   )
 }

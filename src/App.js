@@ -29,6 +29,17 @@ const HOMEPAGE_QUERY = `query HomePage {
       customData
     }
   }
+  allAboutmes {
+    aboutme {
+      filename
+      customData
+      responsiveImage {
+        src
+        height
+        width
+      }
+    }
+  }
 }`;
 
 function App() {
@@ -147,7 +158,8 @@ function App() {
 
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
-
+      <a id="home" ></a>
+      
       <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
         <div className="canvas" style={AppStyles.canvas}>
@@ -158,12 +170,36 @@ function App() {
 
         </div>
       </div>
+      <a id="aboutme" ></a>
+
+      <div class="about-container">
+        <div class="about-text">
+          <h1 class="about-me">
+            About me
+          </h1>
+          <article>
+          <p>
+            <p language="english" class="about-line">heeeyooooo</p>
+            <p language="hungarian" class="about-line">haliho</p>
+            <br></br>
+            <p language="english" class="about-line">I have worked as a photographer for almost 6 years, it's my passion as well as my job. I love catching moments and making them last forever in my pictures.</p>
+            <p language="hungarian" class="about-line">{data.allAboutmes[0].aboutme.customData.aboutmetext}</p>
+            <br></br>
+          </p>
+          </article>
+        </div>
+        <div class="about-picture">
+          <Image data={data.allAboutmes[0].aboutme.responsiveImage} />
+        </div>
+      </div>
+
       <a id="portfolio" ></a>
       <Portfolio setAllLanguage={setAllLanguage}/>
       <a id="services" ></a>
+      <a id="contact" ></a>
       <div className="impressum" style={AppStyles.impressum}>
-            @By Cs Marton, 2022
-          </div>
+        @By Cs Marton, 2022
+      </div>
     </motion.div>
   );
 }

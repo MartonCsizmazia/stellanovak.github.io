@@ -2,6 +2,7 @@ import './menu.css';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import {useState, useEffect, React} from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const MobileMenu = (props) => {
 
@@ -13,13 +14,30 @@ const MobileMenu = (props) => {
       dropdown[i].addEventListener("click", function() {
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-      } else {
-      dropdownContent.style.display = "block";
-      }
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
       });
     }
+
+    const closeMenuBar = () => {
+      document.getElementById("sidenav").style.transition = "1s";
+      document.getElementById("sidenav").style.left = "-17rem";
+    }
+
+    // for (i = 0; i < dropdown.length; i++) {
+    //   dropdown[i].addEventListener("click", function() {
+    //   this.classList.toggle("active");
+    //   var dropdownContent = this.nextElementSibling;
+    //     if (dropdownContent.style.display === "block") {
+    //       dropdownContent.style.display = "none";
+    //     } else {
+    //       dropdownContent.style.display = "block";
+    //     }
+    //   });
+    // }
 
   });
 
@@ -64,15 +82,16 @@ let sidenavStyle = {
 
       <div id="sidenav" style={sidenavStyle}>
         <span className="close-navbar" onClick={closeMenuBar}>×</span>
-        <Link to={"/"}>
+        <HashLink smooth to={"/#home"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Home</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar} >Főoldal</span>
-        </Link>
+        </HashLink>
 
-        <Link to={"/"}>
+        <HashLink smooth to={"/#aboutme"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>About me</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Rólam</span>
-        </Link>
+        </HashLink>
+
         <button className="dropdown-btn" id="portfolio-dropdown">
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfolio</span>
           <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfólió</span>
@@ -88,16 +107,21 @@ let sidenavStyle = {
           ))}
         </div>
 
-        <Link to={"/services"}>
+        {/* <Link to={"/services"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Services</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Szolgáltatások</span>
-        </Link>
+        </Link> */}
+
+        <HashLink smooth to={"/#services"}>
+          <span language="english" className="page-part" onClick={closeMenuBar}>Services</span>
+          <span language="hungarian" className="page-part" onClick={closeMenuBar}>Szolgáltatások</span>
+        </HashLink>
 
 
-        <Link to={"/"}>
+        <HashLink smooth to={"/#contact"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Contact</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Kapcsolat</span>
-        </Link>
+        </HashLink>
 
         <div className= "mobile-flag" onClick={switchLang}>
           <img language="english" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>

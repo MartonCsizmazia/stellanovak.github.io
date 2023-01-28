@@ -14,31 +14,30 @@ const Menu = (props) => {
   return(
     <div id="menu-bar">
       <div className="menu-title">
-      <Link smooth to={"/"}>
+      <HashLink smooth to={"/#home"}>
         <a language="english"  >Home</a>
         <a language="hungarian" >Főoldal</a>
-      </Link>
+      </HashLink>
       </div>
+
       <div className="menu-title dropdown">
-        <Link to={"/"}>
+        <HashLink smooth to={"/#aboutme"}>
           <a language="english" href="/" >About me</a>
           <a language="hungarian" href="/" >Rólam</a>
-        </Link>
-        <div className="dropdown-content" >
+        </HashLink>
+        {/* <div className="dropdown-content" >
           <Link to={"/"}>
             <a language="english" href="/">Aknowledgements</a>
             <a language="hungarian" href="/" >Elismerések</a>
           </Link>
-        </div>
+        </div> */}
       </div>
+
       <div className="menu-title dropdown">
         <HashLink smooth to="/#portfolio">
-          <span language="english" className="dropbtn page-part" >Portfolio</span>
-          <span language="hungarian" className="dropbtn page-part" >Portfólió</span>
+          <a language="english" className="dropbtn " >Portfolio</a>
+          <a language="hungarian" className="dropbtn " >Portfólió</a>
         </HashLink>
-
-        {/* <a language="english" href="#portfolio" class="dropbtn page-part" >Portfolio</a>
-        <a language="hungarian" href="#portfolio" class="dropbtn page-part" >Portfólió</a> */}
 
         <div className="dropdown-content">
           {props.menuList.map((menuItem, i) => (
@@ -56,10 +55,12 @@ const Menu = (props) => {
         </HashLink>
       </div>
       <div className="menu-title">
-        <Link to={"/"}>
+        <HashLink smooth to={"/#contact"}>
           <a language="english"  >Contact</a>
           <a language="hungarian"  >Kapcsolat</a>
-        </Link>
+        </HashLink>
+        {/* <a language="english" href="/#contact" >Contact</a>
+        <a language="hungarian" href="/#contact" >Kapcsolat</a> */}
       </div>
       <div className="menu-title" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>

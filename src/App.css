@@ -6,4 +6,67 @@ h3 {
   color: white;
 }
 
+.about-container {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  /* margin-bottom: 10rem; */
+}
 
+.about-text {
+  max-width: 40rem;
+  padding: 0 8% 8% 8%;
+}
+
+.about-text p {
+  color: white;
+  font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
+    helvetica-w02-light, sans-serif;
+  font-size: 1rem;
+}
+
+#sword-lady {
+  width: 30vw;
+}
+
+.about-me {
+  font-size: 4rem;
+  margin-right: auto;
+}
+
+.about-line {
+  margin-bottom: -1rem;
+}
+
+.about-picture {
+  max-width: 30rem;
+  padding: 3.5% 12% 1.5% 4.5%;
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .about-container {
+    display: block;
+  }
+  .about-picture {
+    padding: 0;
+    margin: 0 12%;
+    width: auto;
+    max-width: 30rem;
+  }
+
+  .name-title {
+    top: 24%;
+  }
+
+  .about-me {
+    text-align: center;
+    padding-top: 5rem;
+  }
+
+  /* #sword-lady {
+    width: 80vw;
+  } */
+}
