@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import {useState, useEffect, React} from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faBars,  faCaretDown,  faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 const MobileMenu = (props) => {
 
@@ -95,7 +95,7 @@ let sidenavStyle = {
         <button className="dropdown-btn" id="portfolio-dropdown">
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfolio</span>
           <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfólió</span>
-          <i className="fa fa-caret-down" id="portfolio-dropdown-caret"></i>
+          <FontAwesomeIcon icon={faCaretDown} className="fa-caret-down" id="portfolio-dropdown-caret"/>
         </button>
         <div className="dropdown-container">
           {props.menuList.map((menuItem, i) => (
