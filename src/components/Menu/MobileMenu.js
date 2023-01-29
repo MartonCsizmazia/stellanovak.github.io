@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import {useState, useEffect, React} from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 const MobileMenu = (props) => {
 
@@ -74,9 +76,7 @@ let sidenavStyle = {
     <div>
       <div id="menu-button-line">
         <div className="icon" onClick={openMenuBar} id="menu-button">
-            <i className="fa fa-bars" id="menu-icon"></i>
-            <span language="english" className="menu-button-title" id="menu-title-id"> Menu</span>
-            <span language="hungarian" className="menu-button-title" id="menu-title-id"> Menü</span>
+          <FontAwesomeIcon icon={faBars} className="menu-icon"/>
         </div>
       </div>
 

@@ -44,9 +44,52 @@ h3 {
   padding: 3.5% 12% 1.5% 4.5%;
 }
 
+.contact-container{
+  margin-bottom: 6rem;
+}
 
+
+.contact-header {
+  text-align: center;
+  font-size: 4rem;
+}
+
+#contact-info {
+  /* text-align: center;
+  font-size: 1.3rem;
+  margin: 3rem 0; */
+  display: flex;
+  justify-content:space-evenly;
+  text-align: center;
+}
+
+#contact-title p {
+  text-align: left;
+  margin: -0.8rem 0;
+}
+
+.fa-icon{
+  font-size: 3vw;
+}
+
+.contact-part{
+  flex-grow: 1;
+  flex: 1 1 0px;
+}
+
+.location-lines p{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 
 @media screen and (max-width: 750px) {
+
+  .fixed-menu-spacer {
+    width: 100%;
+    background-color: black;
+    height: 3rem;
+  }
+
   .about-container {
     display: block;
   }
@@ -69,4 +112,21 @@ h3 {
   /* #sword-lady {
     width: 80vw;
   } */
+
+  #contact-info {
+    display: block;
+    text-align: center;
+  }
+
+  .fa-icon{
+    font-size: 5vw;
+  }
+
+  .contact-part{
+    padding-bottom: 6vw;
+  }
+  .contact-part p{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
 }

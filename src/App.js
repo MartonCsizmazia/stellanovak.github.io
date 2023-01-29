@@ -9,7 +9,9 @@ import Menu from '../src/components/Menu/Menu'
 import { Helmet } from "react-helmet";
 import MobileMenu from './components/Menu/MobileMenu';
 import { motion } from 'framer-motion';
-import $ from 'jquery';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -158,8 +160,9 @@ function App() {
 
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
-      <a id="home" ></a>
-      
+      {/* <a id="home" ></a> */}
+      <div class= "fixed-menu-spacer" id="home"></div>
+
       <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />
         <div className="canvas" style={AppStyles.canvas}>
@@ -197,6 +200,53 @@ function App() {
       <Portfolio setAllLanguage={setAllLanguage}/>
       <a id="services" ></a>
       <a id="contact" ></a>
+      <section>
+        <div class="contact-container">
+          <div class="contact-text">
+            <h1 class="contact-header">
+              Contact
+            </h1>
+
+            <div id="contact-info">
+              <div className='contact-part'>
+                <FontAwesomeIcon icon={faLocationDot} className="fa-icon"/>
+                  <div className='location-lines'>
+                    <p>
+                      Stella Novak
+                    </p>
+                    <p>
+                      Photographer
+                    </p>
+                    <p>
+                      based in Budapest
+                    </p>
+                  </div>
+              </div>
+
+              <div className='contact-part'>
+                <FontAwesomeIcon icon={faPhone} className="fa-icon"/>
+                <p>
+                  Phone: 123-456-78901
+                </p>
+              </div>
+
+              <div className='contact-part'>
+                <FontAwesomeIcon icon={faEnvelope} className="fa-icon"/>
+                <p>
+                  Email: info@stellanovak.com
+                </p>
+              </div>
+
+              <div className='contact-part'>
+              <FontAwesomeIcon icon={faInstagram} className="fa-icon"/>
+                <p>
+                  Instagram: info@stellanovak.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="impressum" style={AppStyles.impressum}>
         @By Cs Marton, 2022
       </div>

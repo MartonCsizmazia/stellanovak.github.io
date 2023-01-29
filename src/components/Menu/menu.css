@@ -111,6 +111,12 @@ i {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 900px) {
+  #menu-bar {
+    font-size: 2vw;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .fixed-menu-spacer {
     width: 100%;
@@ -128,12 +134,13 @@ i {
   #menu-button {
     display: block;
     position: fixed;
-    left: 2rem;
+    left: 1rem;
     color: white;
     font-size: 2rem;
     z-index: 10;
-    margin-top: 0.4rem;
-    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
   }
 
   .menu-button-title {
