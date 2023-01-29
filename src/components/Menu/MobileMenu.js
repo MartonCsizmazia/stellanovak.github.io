@@ -5,41 +5,11 @@ import {useState, useEffect, React} from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,  faCaretDown,  faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import $ from 'jquery';
 
 const MobileMenu = (props) => {
 
   useEffect(() => {
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
-        }
-      });
-    }
-
-    const closeMenuBar = () => {
-      document.getElementById("sidenav").style.transition = "1s";
-      document.getElementById("sidenav").style.left = "-17rem";
-    }
-
-    // for (i = 0; i < dropdown.length; i++) {
-    //   dropdown[i].addEventListener("click", function() {
-    //   this.classList.toggle("active");
-    //   var dropdownContent = this.nextElementSibling;
-    //     if (dropdownContent.style.display === "block") {
-    //       dropdownContent.style.display = "none";
-    //     } else {
-    //       dropdownContent.style.display = "block";
-    //     }
-    //   });
-    // }
 
   });
 
@@ -51,7 +21,7 @@ function switchLang(){
   } else {
         localStorage.setItem("language", "hungarian");
   }
-  // console.log(localStorage.getItem("language"))
+
   props.switchLang();
 }
 
@@ -63,6 +33,17 @@ function openMenuBar(){
 
 function closeMenuBar(){
   props.closeMenuBar()
+}
+
+function handleDropDown(){
+  var dropdown = document.getElementById("portfolio-dropdown")
+  dropdown.classList.toggle("active");
+  var dropdownContent = dropdown.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
 }
 
 //MODIFY STYLE WITH setState TO LEARN
@@ -92,8 +73,8 @@ let sidenavStyle = {
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Rólam</span>
         </HashLink>
 
-        <button className="dropdown-btn" id="portfolio-dropdown">
-          <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfolio</span>
+        <button className="dropdown-btn" id="portfolio-dropdown" onClick={handleDropDown}>
+          <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title" >Portfolio</span>
           <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfólió</span>
           <FontAwesomeIcon icon={faCaretDown} className="fa-caret-down" id="portfolio-dropdown-caret"/>
         </button>
