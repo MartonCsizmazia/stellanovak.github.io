@@ -177,9 +177,9 @@ function App() {
 
       <div class="about-container">
         <div class="about-text">
-          <h1 class="about-me">
-            About me
-          </h1>
+          <h1 language="english" class="about-me">About me </h1>
+          <h1 language="hungarian" class="about-me">Rólam </h1>
+
           <article>
           <p>
             <p language="english" class="about-line">heeeyooooo</p>
@@ -203,45 +203,33 @@ function App() {
       <section>
         <div class="contact-container">
           <div class="contact-text">
-            <h1 class="contact-header">
-              Contact
-            </h1>
+            <h1 language="english" class="contact-header"> Contact </h1>
+            <h1 language="hungarian" class="contact-header"> Kapcsolat </h1>
+
 
             <div id="contact-info">
               <div className='contact-part'>
                 <FontAwesomeIcon icon={faLocationDot} className="fa-icon"/>
                   <div className='location-lines'>
-                    <p>
-                      Stella Novak
-                    </p>
-                    <p>
-                      Photographer
-                    </p>
-                    <p>
-                      based in Budapest
-                    </p>
+                    <p> Stella Novak </p>
+                    <p> Photographer </p>
+                    <p> based in Budapest </p>
                   </div>
               </div>
 
               <div className='contact-part'>
                 <FontAwesomeIcon icon={faPhone} className="fa-icon"/>
-                <p>
-                  Phone: 123-456-78901
-                </p>
+                <p> Phone: 123-456-78901 </p>
               </div>
 
               <div className='contact-part'>
                 <FontAwesomeIcon icon={faEnvelope} className="fa-icon"/>
-                <p>
-                  Email: info@stellanovak.com
-                </p>
+                <p> Email: info@stellanovak.com </p>
               </div>
 
               <div className='contact-part'>
               <FontAwesomeIcon icon={faInstagram} className="fa-icon"/>
-                <p>
-                  Instagram: info@stellanovak.com
-                </p>
+                <p> Instagram: info@stellanovak.com </p>
               </div>
             </div>
           </div>

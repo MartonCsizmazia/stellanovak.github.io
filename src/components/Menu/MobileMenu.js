@@ -4,8 +4,8 @@ import { useRef } from 'react';
 import {useState, useEffect, React} from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,  faCaretDown,  faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import $ from 'jquery';
+import { faBars,  faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const MobileMenu = (props) => {
 
@@ -110,10 +110,10 @@ let sidenavStyle = {
         </div>
         <div className="social-media-icons menu-title">
           <div >
-            <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF}/></a>
           </div>
           <div >
-            <a href="https://www.instagram.com/nesztiii/" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/nesztiii/" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram}/></a>
           </div>
         </div>
       </div>

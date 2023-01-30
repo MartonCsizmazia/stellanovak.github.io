@@ -1,6 +1,8 @@
 import './menu.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 const Menu = (props) => {
   function switchLang(){
     if (localStorage.getItem("language") === "hungarian"){
@@ -68,10 +70,10 @@ const Menu = (props) => {
       </div>
       <div className="social-media-icons menu-title">
         <div >
-          <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF}/></a>
         </div>
-        <div >
-          <a href="https://www.instagram.com/nesztiii/" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+        <div>
+          <a href="https://www.instagram.com/nesztiii/" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram}/></a>
         </div>
       </div>
     </div>
