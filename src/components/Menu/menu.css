@@ -69,7 +69,8 @@ i {
   margin-top: 1rem;
 }
 
-.social-media-icons {
+.social-media-icons,
+.social-media-icons-mobile{
   display: flex;
   justify-content:space-evenly;
   width: auto;
@@ -85,7 +86,12 @@ i {
 
 .social-media-icons div a{
   padding: 0 !important;
-  font-size: 1.7rem !important;
+  font-size: 1.5vw !important;
+}
+
+.social-media-icons-mobile div a{
+  padding: 0 !important;
+  font-size: 1.5rem !important;
 }
 
 .dropdown {
@@ -203,6 +209,7 @@ i {
     cursor: pointer;
     outline: none;
   }
+
   .dropdown-span {
     /* line-height: 2rem; */
   }

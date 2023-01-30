@@ -211,11 +211,11 @@ function App() {
             <div id="contact-info">
               <div className='contact-part'>
                 <FontAwesomeIcon icon={faLocationDot} className="fa-icon"/>
-                  <div className='location-lines'>
+                  <p className='location-lines'>
                     <p> Stella Novak </p>
                     <p> Photographer </p>
                     <p> based in Budapest </p>
-                  </div>
+                  </p>
               </div>
 
               <div className='contact-part'>
@@ -237,7 +237,7 @@ function App() {
         </div>
       </section>
       <div className="impressum" style={AppStyles.impressum}>
-        @By Cs Marton, 2022
+        @Website made by Csizmazia Márton, 2023
       </div>
     </motion.div>
   );
@@ -285,7 +285,7 @@ const AppStyles = {
       color: "white",
       bottom: "0",
       left: "0",
-      fontSize: "8px"
+      fontSize: "17px"
     }
 };
 
