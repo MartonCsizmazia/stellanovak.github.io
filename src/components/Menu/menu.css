@@ -76,6 +76,10 @@ i {
 }
 
 .social-media-icons div {
+  margin: 0rem 1rem;
+}
+
+.social-media-icons-mobile div {
   margin: 2rem 1rem 0 1rem;
 }
 
