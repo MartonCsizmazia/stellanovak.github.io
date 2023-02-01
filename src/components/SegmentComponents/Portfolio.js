@@ -75,9 +75,9 @@ const Portfolio = (props) => {
 }
 
 const PortfolioStyles = {
-  portfolio: {
-    marginTop: "10rem"
-  },
+  // portfolio: {
+  //   marginTop: "10rem"
+  // },
 
   portfolioTitleContainer: {
     margin: "7% 0 2.5% 0",

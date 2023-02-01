@@ -45,6 +45,10 @@ h3 {
   padding: 3.5% 12% 1.5% 4.5%;
 }
 
+.services-container{
+  margin-top: 7rem;
+}
+
 .services-text{
   margin-left: 6vw;
   font-style: italic;
@@ -55,6 +59,7 @@ h3 {
 }
 
 .contact-container{
+  margin-top: 7rem;
   margin-bottom: 6rem;
 }
 
@@ -133,5 +138,10 @@ h3 {
   .contact-part p{
     margin-top: 3px;
     margin-bottom: 3px;
+  }
+
+  .services-container,
+  .contact-container{
+    margin-top: 4rem;
   }
 }
