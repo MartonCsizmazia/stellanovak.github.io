@@ -116,7 +116,7 @@ let sidenavStyle = {
           <img language="english" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
           <img language="hungarian" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>
         </div>
-        <div className="social-media-icons-mobile menu-title">
+        <div className="social-media-icons-mobile">
           <div >
             <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF}/></a>
           </div>

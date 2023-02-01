@@ -134,7 +134,7 @@ const PortfolioSubPage = (props) => {
           <span language="hungarian">{hunSubPageName}</span>
         </div>
         <ResponsiveMasonry
-            columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+            columnsCountBreakPoints={{350:1, 500: 2, 900: 3}}
         >
             <Masonry gutter="1.5rem">
                 {data['all' + pluralize(upperProps.toString())][0][props.title.toString()]
@@ -168,7 +168,7 @@ const PortfolioSubPageStyles = {
     textAlign: "left",
     paddingLeft: "0",
     paddingBottom: "3vw",
-    fontSize: "4vw",
+    fontSize: "5.5vw",
   }
 };
 

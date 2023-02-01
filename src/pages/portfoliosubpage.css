@@ -5,3 +5,8 @@
 .subPageImage:hover {
   transform: scale(1.08) !important;
 }
+
+
+@media screen and (max-width: 750px) {
+  
+}

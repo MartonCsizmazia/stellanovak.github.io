@@ -3,7 +3,7 @@
   z-index: 1;
   margin: 3rem 8% 3rem 3rem;
   width: auto;
-  color: white;
+
   font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
     helvetica-w02-light, sans-serif;
   /* font-size: 1.5rem; */
@@ -11,6 +11,8 @@
   display: flex;
   justify-content: flex-end;
   right: 0;
+  /* background-color: 174, 174, 174, 0.3; */
+  background-color: #9d9d9d8c
 }
 
 #sidenav {
@@ -26,11 +28,12 @@
   float: right;
   font-size: 1.5rem;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .close-navbar:hover,
 .close-navbar:focus {
-  color: rgba(68, 68, 68, 0.75);
+  color: #818181;
   text-decoration: none;
   cursor: pointer;
 }
@@ -46,7 +49,8 @@ i {
 }
 
 #menu-bar a:hover {
-  color: rgba(255, 255, 255, 0.541);
+  /* color: rgba(255, 255, 255, 0.541); */
+  color: white;
 }
 
 #menu-bar i:hover {
@@ -54,14 +58,15 @@ i {
 }
 
 .menu-title {
-  width: 12vw;
+  width: 12.5vw;
   text-align: center;
 }
 
 .menu-title a {
-  color: white;
+  /* color: white; */
+  color: #333;
   text-decoration: none;
-  border: orange;
+  /* border: orange; */
   border-radius: 5px;
 }
 
@@ -73,7 +78,6 @@ i {
 .social-media-icons-mobile{
   display: flex;
   justify-content:space-evenly;
-  width: auto;
 }
 
 .social-media-icons div {
@@ -144,11 +148,12 @@ i {
     height: 3rem;
   }
   #menu-button-line {
-    width: 100%;
+    width: 110%;
     background-color: #111;
     position: fixed;
     height: 3rem;
     z-index: 9;
+    left: -3vw;
   }
 
   #menu-button {
@@ -161,6 +166,11 @@ i {
     margin-top: 0.5rem;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #menu-button:hover {
+    color: #818181;
   }
 
   .menu-button-title {
@@ -208,8 +218,13 @@ i {
     text-align: left;
     cursor: pointer;
     outline: none;
+    transition: 0.3s;
   }
 
+  #sidenav a:hover,
+  .dropdown-btn:hover{
+    color: white;
+  }
   .dropdown-span {
     /* line-height: 2rem; */
   }
@@ -253,4 +268,12 @@ i {
   .fa-caret-down {
     margin-right: 0.7rem;
   }
+
+  /* .page-part{
+    transition: 0.3s;
+  }
+
+  .page-part:hover {
+    color: white;
+  } */
 }
