@@ -162,8 +162,8 @@ function App() {
 
       <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
-      {/* <a id="home" ></a> */}
-      <div class= "fixed-menu-spacer" id="home"></div>
+      <a id="home" ></a>
+      <div class= "fixed-menu-spacer"></div>
 
       <div className="mainBackground">
         <Image data={data.allBackgrounds[0].mainBackground.responsiveImage} />

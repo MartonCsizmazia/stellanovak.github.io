@@ -144,12 +144,15 @@ i {
 @media screen and (max-width: 750px) {
   .fixed-menu-spacer {
     width: 100%;
-    background-color: black;
-    height: 3rem;
-  }
-  #menu-button-line {
-    /* width: 103%; */
     background-color: #111;
+    height: 3rem;
+    /* position: fixed; */
+    z-index: 8;
+  }
+
+  #menu-button-line {
+    background-color: #111;
+    width: 103vw;
     position: fixed;
     height: 3rem;
     z-index: 9;
