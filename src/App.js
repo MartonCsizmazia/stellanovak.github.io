@@ -261,9 +261,10 @@ const AppStyles = {
     pagewidth: {
       maxWidth: "120rem",
       margin: "0 auto",
-      // color: "blue"
-      backgroundColor: "#fafafa",
-      color: "#333"
+      // backgroundColor: "#fafafa",
+      // color: "#333"
+      backgroundColor: "black",
+      color: "white"
     },
 
     canvas: {

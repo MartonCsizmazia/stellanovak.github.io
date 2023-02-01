@@ -22,7 +22,7 @@ const Menu = (props) => {
       </HashLink>
       </div>
 
-      <div className="menu-title dropdown">
+      <div className="menu-title">
         <HashLink smooth to={"/#aboutme"}>
           <a language="english" href="/" >About me</a>
           <a language="hungarian" href="/" >Rólam</a>
