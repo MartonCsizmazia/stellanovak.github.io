@@ -46,9 +46,9 @@ const Portfolio = (props) => {
 
   return (
     <div style={PortfolioStyles.portfolio} className="portfolio">
-      <div style={PortfolioStyles.portfolioTitleContainer}>
-        <h1 language="hungarian" style={PortfolioStyles.portfolioTitle}> Portfólió </h1>
-        <h1 language="english" style={PortfolioStyles.portfolioTitle}> Portfolio </h1>
+      <div style={PortfolioStyles.portfolioTitleContainer} >
+        <h1 language="hungarian" style={PortfolioStyles.portfolioTitle} className="portfolio-title"> Portfólió </h1>
+        <h1 language="english" style={PortfolioStyles.portfolioTitle} className="portfolio-title"> Portfolio </h1>
       </div>
       <div className="card-holder">
         {data.allPortfolios[0].portfolio
@@ -85,10 +85,6 @@ const PortfolioStyles = {
     padding: "0 auto"
   },
 
-  portfolioTitle: {
-    fontSize: "4rem",
-    textAlign: "center",
-  }
 };
 
 export default Portfolio;

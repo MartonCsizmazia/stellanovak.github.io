@@ -111,6 +111,7 @@ h3 {
 
   .about-container {
     display: block;
+    margin-top: 5rem;
   }
   .about-picture {
     padding: 0;
@@ -122,6 +123,12 @@ h3 {
   .name-title {
     top: 24%;
   }
+
+  .about-me,
+  .contact-header,
+  .services-title {
+  font-size: 3rem;
+}
 
   #contact-info {
     display: block;
@@ -142,6 +149,6 @@ h3 {
 
   .services-container,
   .contact-container{
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 }

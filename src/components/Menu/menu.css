@@ -148,7 +148,7 @@ i {
     height: 3rem;
   }
   #menu-button-line {
-    width: 103%;
+    /* width: 103%; */
     background-color: #111;
     position: fixed;
     height: 3rem;
