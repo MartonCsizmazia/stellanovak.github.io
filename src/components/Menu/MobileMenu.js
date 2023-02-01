@@ -4,36 +4,39 @@ import { useRef } from 'react';
 import {useState, useEffect, React} from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,  faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faBars,  faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const MobileMenu = (props) => {
 
   useEffect(() => {
-
+    document.getElementById("portfolio-dropdown-caret-up").style.display = "none"
   });
 
-const [myvalue, setValue] = useState(1);
+  const [myvalue, setValue] = useState(1);
 
-function switchLang(){
-  if (localStorage.getItem("language") === "hungarian"){
-    localStorage.setItem("language", "english");
-  } else {
-        localStorage.setItem("language", "hungarian");
+  function switchLang(){
+    if (localStorage.getItem("language") === "hungarian"){
+      localStorage.setItem("language", "english");
+    } else {
+          localStorage.setItem("language", "hungarian");
+    }
+
+    props.switchLang();
   }
 
-  props.switchLang();
-}
+  /////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////
+  function openMenuBar(){
+    props.openMenuBar()
+  }
 
-function openMenuBar(){
-  props.openMenuBar()
-}
+  function closeMenuBar(){
+    props.closeMenuBar()
+  }
 
-function closeMenuBar(){
-  props.closeMenuBar()
-}
+  // var portfolioCaretUP = document.getElementById("portfolio-dropdown-caret-up");
+  // var portfolioCaretDown = document.getElementById("portfolio-dropdown-caret-down");
 
 function handleDropDown(){
   var dropdown = document.getElementById("portfolio-dropdown")
@@ -41,8 +44,12 @@ function handleDropDown(){
   var dropdownContent = dropdown.nextElementSibling;
   if (dropdownContent.style.display === "block") {
     dropdownContent.style.display = "none";
+    document.getElementById("portfolio-dropdown-caret-up").style.display = "none";
+    document.getElementById("portfolio-dropdown-caret-down").style.display = "block";
   } else {
     dropdownContent.style.display = "block";
+    document.getElementById("portfolio-dropdown-caret-up").style.display = "block";
+    document.getElementById("portfolio-dropdown-caret-down").style.display = "none";
   }
 }
 
@@ -76,7 +83,8 @@ let sidenavStyle = {
         <button className="dropdown-btn" id="portfolio-dropdown" onClick={handleDropDown}>
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title" >Portfolio</span>
           <span language="hungarian" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title">Portfólió</span>
-          <FontAwesomeIcon icon={faCaretDown} className="fa-caret-down" id="portfolio-dropdown-caret"/>
+          <FontAwesomeIcon icon={faCaretDown} className="fa-caret-down" id="portfolio-dropdown-caret-down"/>
+          <FontAwesomeIcon icon={faCaretUp} className="fa-caret-down" id="portfolio-dropdown-caret-up"/>
         </button>
         <div className="dropdown-container">
           {props.menuList.map((menuItem, i) => (

@@ -81,13 +81,13 @@ const PortfolioStyles = {
 
   portfolioTitleContainer: {
     margin: "7% 0 2.5% 0",
-    paddingLeft: "0"
+    paddingLeft: "0",
+    padding: "0 auto"
   },
 
   portfolioTitle: {
     fontSize: "4rem",
-    textAlign: "left",
-    marginLeft: "8%"
+    textAlign: "center",
   }
 };
 

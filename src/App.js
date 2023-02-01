@@ -75,7 +75,8 @@ function App() {
     document.getElementById("sidenav").style.left = "0";
   }
 
-  var portfolioCaret = document.getElementById("portfolio-dropdown-caret");
+  var portfolioCaretUP = document.getElementById("portfolio-dropdown-caret-up");
+  var portfolioCaretDown = document.getElementById("portfolio-dropdown-caret-down");
   var portfolioButtonTitle = document.getElementById("portfolio-dropdown-title");
   var portfolioButton = document.getElementById("portfolio-dropdown");
   var menuIcon = document.getElementById("menu-icon");
@@ -200,42 +201,55 @@ function App() {
       <a id="portfolio" ></a>
       <Portfolio setAllLanguage={setAllLanguage}/>
       <a id="services" ></a>
+        <section>
+          <div class="services-container">
+            <div className='services-title-holder'>
+              <h1 language="english" class="services-title"> Services </h1>
+              <h1 language="hungarian" class="services-title"> Szolgáltatások </h1>
+            </div>
+            <div className='services-text-holder'>
+            <h1 language="english" class="services-text"> Coming soon! </h1>
+              <h1 language="hungarian" class="services-text"> Hamarosan! </h1>
+            </div>
+            <div className='services-card-holder'></div>
+          </div>
+        </section>
       <a id="contact" ></a>
-      <section>
-        <div class="contact-container">
-          <div class="contact-text">
-            <h1 language="english" class="contact-header"> Contact </h1>
-            <h1 language="hungarian" class="contact-header"> Kapcsolat </h1>
+        <section>
+          <div class="contact-container">
+            <div class="contact-text">
+              <h1 language="english" class="contact-header"> Contact </h1>
+              <h1 language="hungarian" class="contact-header"> Kapcsolat </h1>
 
 
-            <div id="contact-info">
-              <div className='contact-part'>
-                <FontAwesomeIcon icon={faLocationDot} className="fa-icon"/>
-                  <p className='location-lines'>
-                    <p> Stella Novak </p>
-                    <p> Photographer </p>
-                    <p> based in Budapest </p>
-                  </p>
-              </div>
+              <div id="contact-info">
+                <div className='contact-part'>
+                  <FontAwesomeIcon icon={faLocationDot} className="fa-icon"/>
+                    <p className='location-lines'>
+                      <p> Stella Novak </p>
+                      <p> Photographer </p>
+                      <p> based in Budapest </p>
+                    </p>
+                </div>
 
-              <div className='contact-part'>
-                <FontAwesomeIcon icon={faPhone} className="fa-icon"/>
-                <p> Phone: 123-456-78901 </p>
-              </div>
+                <div className='contact-part'>
+                  <FontAwesomeIcon icon={faPhone} className="fa-icon"/>
+                  <p> Phone: 123-456-78901 </p>
+                </div>
 
-              <div className='contact-part'>
-                <FontAwesomeIcon icon={faEnvelope} className="fa-icon"/>
-                <p> Email: info@stellanovak.com </p>
-              </div>
+                <div className='contact-part'>
+                  <FontAwesomeIcon icon={faEnvelope} className="fa-icon"/>
+                  <p> Email: info@stellanovak.com </p>
+                </div>
 
-              <div className='contact-part'>
-              <FontAwesomeIcon icon={faInstagram} className="fa-icon"/>
-                <p> Instagram: info@stellanovak.com </p>
+                <div className='contact-part'>
+                <FontAwesomeIcon icon={faInstagram} className="fa-icon"/>
+                  <p> Instagram: info@stellanovak.com </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       <div className="impressum" style={AppStyles.impressum}>
         @Website made by Csizmazia Márton, 2023
       </div>
@@ -246,7 +260,10 @@ function App() {
 const AppStyles = {
     pagewidth: {
       maxWidth: "120rem",
-      margin: "0 auto"
+      margin: "0 auto",
+      // color: "blue"
+      backgroundColor: "#fafafa",
+      color: "#333"
     },
 
     canvas: {
@@ -282,7 +299,7 @@ const AppStyles = {
     },
     impressum: {
       position: "bottom",
-      color: "white",
+      // color: "white",
       bottom: "0",
       left: "0",
       fontSize: "17px"

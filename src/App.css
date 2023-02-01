@@ -3,11 +3,11 @@ h2,
 h3 {
   font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
     helvetica-w02-light, sans-serif;
-  color: white;
+  /* color: white; */
 }
 
 .about-container {
-  margin-top: 10rem;
+  margin-top: 6vw;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -20,7 +20,7 @@ h3 {
 }
 
 .about-text p {
-  color: white;
+  /* color: white; */
   font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
     helvetica-w02-light, sans-serif;
   font-size: 1rem;
@@ -33,6 +33,7 @@ h3 {
 .about-me {
   font-size: 4rem;
   margin-right: auto;
+  text-align: center;
 }
 
 .about-line {
@@ -44,12 +45,21 @@ h3 {
   padding: 3.5% 12% 1.5% 4.5%;
 }
 
+.services-text{
+  margin-left: 6vw;
+  font-style: italic;
+}
+
+.services-card-holder {
+  height: 10rem;
+}
+
 .contact-container{
   margin-bottom: 6rem;
 }
 
-
-.contact-header {
+.contact-header,
+.services-title {
   text-align: center;
   font-size: 4rem;
 }
@@ -78,7 +88,7 @@ h3 {
 }
 
 .location-lines{
-  
+
 }
 
 .location-lines p{
@@ -107,15 +117,6 @@ h3 {
   .name-title {
     top: 24%;
   }
-
-  .about-me {
-    text-align: center;
-    padding-top: 5rem;
-  }
-
-  /* #sword-lady {
-    width: 80vw;
-  } */
 
   #contact-info {
     display: block;
