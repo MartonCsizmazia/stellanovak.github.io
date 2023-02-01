@@ -105,8 +105,10 @@ h3 {
 
   .fixed-menu-spacer {
     width: 100%;
-    background-color: black;
+    background-color: #111;
     height: 3rem;
+    position: fixed;
+    z-index: 8;
   }
 
   .about-container {
