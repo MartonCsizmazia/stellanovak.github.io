@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
-const Menu = (props) => {
+const Indexmenu = (props) => {
   function switchLang(){
     if (localStorage.getItem("language") === "hungarian"){
       localStorage.setItem("language", "english");
@@ -22,20 +22,18 @@ const Menu = (props) => {
       </HashLink>
       </div>
 
-      {/* <div className="menu-title">
+      <div className="menu-title">
         <HashLink smooth to={"/#aboutme"}>
           <a language="english" href="/" >About me</a>
           <a language="hungarian" href="/" >Rólam</a>
         </HashLink>
-
-        <div className="dropdown-content" >
+        {/* <div className="dropdown-content" >
           <Link to={"/"}>
             <a language="english" href="/">Aknowledgements</a>
             <a language="hungarian" href="/" >Elismerések</a>
           </Link>
-        </div>
-
-      </div> */}
+        </div> */}
+      </div>
 
       <div className="menu-title dropdown">
         <HashLink smooth to="/#portfolio">
@@ -52,7 +50,7 @@ const Menu = (props) => {
           ))}
         </div>
       </div>
-      {/* <div className="menu-title">
+      <div className="menu-title">
         <HashLink smooth to={"/#services"}>
           <a language="english" >Services</a>
           <a language="hungarian"  >Szolgáltatások</a>
@@ -63,7 +61,9 @@ const Menu = (props) => {
           <a language="english"  >Contact</a>
           <a language="hungarian"  >Kapcsolat</a>
         </HashLink>
-      </div> */}
+        {/* <a language="english" href="/#contact" >Contact</a>
+        <a language="hungarian" href="/#contact" >Kapcsolat</a> */}
+      </div>
       <div className="menu-title" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
         <img language="hungarian" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>
@@ -88,4 +88,4 @@ const MenuStyles = {
   }
 }
 
-export default Menu
+export default Indexmenu

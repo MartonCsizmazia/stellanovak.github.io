@@ -169,6 +169,7 @@ const PortfolioSubPageStyles = {
     paddingLeft: "0",
     paddingBottom: "3vw",
     fontSize: "5.5vw",
+    color: "white"
   }
 };
 

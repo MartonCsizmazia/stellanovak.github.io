@@ -25,7 +25,7 @@ const ModalStyles = {
   btn: {
     cursor: "pointer",
     borderRadius: "4px",
-    backgroundColor: "#800040",
+    // backgroundColor: "#800040",
     padding: "0.5rem 1.5rem",
     color: "white",
     border: "1px solid #800040",

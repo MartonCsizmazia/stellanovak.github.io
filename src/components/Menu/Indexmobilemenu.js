@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,  faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const MobileMenu = (props) => {
+const Indexmobilemenu = (props) => {
 
   useEffect(() => {
     document.getElementById("portfolio-dropdown-caret-up").style.display = "none"
@@ -75,10 +75,10 @@ let sidenavStyle = {
           <span language="hungarian" className="page-part" onClick={closeMenuBar} >Főoldal</span>
         </HashLink>
 
-        {/* <HashLink smooth to={"/#aboutme"}>
+        <HashLink smooth to={"/#aboutme"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>About me</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Rólam</span>
-        </HashLink> */}
+        </HashLink>
 
         <button className="dropdown-btn" id="portfolio-dropdown" onClick={handleDropDown}>
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title" >Portfolio</span>
@@ -96,7 +96,12 @@ let sidenavStyle = {
           ))}
         </div>
 
-        {/* <HashLink smooth to={"/#services"}>
+        {/* <Link to={"/services"}>
+          <span language="english" className="page-part" onClick={closeMenuBar}>Services</span>
+          <span language="hungarian" className="page-part" onClick={closeMenuBar}>Szolgáltatások</span>
+        </Link> */}
+
+        <HashLink smooth to={"/#services"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Services</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Szolgáltatások</span>
         </HashLink>
@@ -105,7 +110,7 @@ let sidenavStyle = {
         <HashLink smooth to={"/#contact"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Contact</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Kapcsolat</span>
-        </HashLink> */}
+        </HashLink>
 
         <div className= "mobile-flag" onClick={switchLang}>
           <img language="english" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
@@ -136,4 +141,4 @@ const MobilemenuStyles = {
   }
 }
 
-export default MobileMenu
+export default Indexmobilemenu

@@ -6,7 +6,7 @@ const BackdropStyles = {
   backdrop: {
     position: "fixed",
     zIndex: "20",
-    backgroundColor: "rgba(0, 0, 0, 0.75)",
+    // backgroundColor: "rgba(0, 0, 0, 0.75)",
     width: "100%",
     height: "100vh",
     top: "0",

@@ -12,6 +12,8 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Indexmenu from './components/Menu/Indexmenu';
+import Indexmobilemenu from './components/Menu/Indexmobilemenu';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -160,8 +162,8 @@ function App() {
       {/* { ModalIsOpen ? <Modal onChoose={closeModalHandler}/> : null}
       { ModalIsOpen ? <Backdrop /> : null} */}
 
-      <Menu menuList={portfolioTitles} switchLang={setAllLanguage}/>
-      <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
+      <Indexmenu menuList={portfolioTitles} switchLang={setAllLanguage}/>
+      <Indexmobilemenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
       <a id="home" ></a>
       <div class= "fixed-menu-spacer"></div>
 
