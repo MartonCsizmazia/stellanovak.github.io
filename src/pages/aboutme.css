@@ -1,0 +1,78 @@
+.about-container-sub {
+  padding-top: 10vw;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  /* margin-bottom: 10rem; */
+}
+
+.about-text {
+  max-width: 40rem;
+  padding: 0 8% 8% 8%;
+  color: white;
+}
+
+.about-text p {
+  /* color: white; */
+  font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
+    helvetica-w02-light, sans-serif;
+  font-size: 1rem;
+}
+
+#sword-lady {
+  width: 30vw;
+}
+
+.about-me {
+  font-size: 4rem;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about-line {
+  margin-bottom: -1rem;
+}
+
+.about-picture-sub {
+  max-width: 30rem;
+  padding: 3.5% 12% 1.5% 4.5%;
+}
+
+/* .about-me-link-container{
+  width: 5.8rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+  margin: 0 auto;
+}
+
+.about-me-link{
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 5px;
+  display: block;
+}
+
+.about-me-link-container:hover{
+  transform: scale(1.2);
+} */
+@media screen and (max-width: 900px) {
+  .about-container-sub {
+    display: block;
+  }
+
+  .about-me {
+    font-size: 10vw;
+  }
+
+  .about-text p {
+    font-size: 4vw;
+  }
+
+  .about-picture-sub {
+    max-width: 30rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+}

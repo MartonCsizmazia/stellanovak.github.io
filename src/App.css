@@ -45,6 +45,28 @@ h3 {
   padding: 3.5% 12% 1.5% 4.5%;
 }
 
+.about-me-link-container{
+  width: 5.8rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+  margin: 0 auto;
+}
+
+.about-me-link{
+  border: 2px solid white;
+  /* display: inline-block; */
+  border-radius: 12px;
+  padding: 5px;
+  display: block;
+  /* margin: 0 auto; */
+}
+
+.about-me-link-container:hover{
+  transform: scale(1.2);
+}
+
 .services-container{
   margin-top: 7rem;
 }

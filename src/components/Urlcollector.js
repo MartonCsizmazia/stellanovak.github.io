@@ -1,6 +1,7 @@
 import { useQuery } from "graphql-hooks";
 import { Routes, Route, useLocation  } from 'react-router-dom';
 import App from '../App';
+import Aboutme from "../pages/Aboutme";
 import PortfolioSubPage from '../pages/PortfolioSubPage';
 import Services from "../pages/Services";
 
@@ -54,6 +55,7 @@ const Urlcollector = (links) => {
 
       )}
       <Route exact path='/services' element={<Services/>}/>
+      <Route exact path='/aboutme' element={<Aboutme/>}/>
     </Routes>
 
     </div>

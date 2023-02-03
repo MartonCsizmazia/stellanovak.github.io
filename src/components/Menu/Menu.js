@@ -22,20 +22,20 @@ const Menu = (props) => {
       </HashLink>
       </div>
 
-      {/* <div className="menu-title">
-        <HashLink smooth to={"/#aboutme"}>
+      <div className="menu-title">
+        <HashLink smooth to={"/aboutme"}>
           <a language="english" href="/" >About me</a>
           <a language="hungarian" href="/" >Rólam</a>
         </HashLink>
 
-        <div className="dropdown-content" >
+        {/* <div className="dropdown-content" >
           <Link to={"/"}>
             <a language="english" href="/">Aknowledgements</a>
             <a language="hungarian" href="/" >Elismerések</a>
           </Link>
-        </div>
+        </div> */}
 
-      </div> */}
+      </div>
 
       <div className="menu-title dropdown">
         <HashLink smooth to="/#portfolio">

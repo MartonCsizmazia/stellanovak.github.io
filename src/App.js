@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Indexmenu from './components/Menu/Indexmenu';
 import Indexmobilemenu from './components/Menu/Indexmobilemenu';
+import { Link } from 'react-router-dom';
 
 const HOMEPAGE_QUERY = `query HomePage {
   allBackgrounds {
@@ -185,14 +186,17 @@ function App() {
           <h1 language="hungarian" class="about-me">Rólam </h1>
 
           <article>
-          <p>
-            <p language="english" class="about-line">heeeyooooo</p>
-            <p language="hungarian" class="about-line">haliho</p>
-            <br></br>
-            <p language="english" class="about-line">I have worked as a photographer for almost 6 years, it's my passion as well as my job. I love catching moments and making them last forever in my pictures.</p>
-            <p language="hungarian" class="about-line">{data.allAboutmes[0].aboutme.customData.aboutmetext}</p>
-            <br></br>
-          </p>
+            <p>
+              <p language="english" class="about-line">heeeyooooo</p>
+              <p language="hungarian" class="about-line">haliho</p>
+              <br></br>
+              <p language="english" class="about-line">I have worked as a photographer for almost 6 years, it's my passion as well as my job. I love catching moments and making them last forever in my pictures.</p>
+              <p language="hungarian" class="about-line">{data.allAboutmes[0].aboutme.customData.aboutmetext}</p>
+              <br></br>
+            </p>
+              <Link to={"/aboutme"} className='about-me-link-container'>
+                <div className='about-me-link'> Read more </div>
+              </Link>
           </article>
         </div>
         <div class="about-picture">

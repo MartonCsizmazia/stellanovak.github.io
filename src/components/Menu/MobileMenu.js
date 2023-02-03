@@ -75,10 +75,10 @@ let sidenavStyle = {
           <span language="hungarian" className="page-part" onClick={closeMenuBar} >Főoldal</span>
         </HashLink>
 
-        {/* <HashLink smooth to={"/#aboutme"}>
+        <HashLink smooth to={"/aboutme"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>About me</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Rólam</span>
-        </HashLink> */}
+        </HashLink>
 
         <button className="dropdown-btn" id="portfolio-dropdown" onClick={handleDropDown}>
           <span language="english" className="dropbtn page-part dropdown-span" id="portfolio-dropdown-title" >Portfolio</span>

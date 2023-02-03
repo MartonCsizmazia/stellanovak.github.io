@@ -1,9 +1,9 @@
 import { useQuery } from "graphql-hooks";
-import { Image } from 'react-datocms';
+
 import Menu from "../components/Menu/Menu";
+import MobileMenu from "../components/Menu/MobileMenu";
 import {useEffect} from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import MobileMenu from "../components/Menu/MobileMenu";
 import { Helmet } from "react-helmet";
 import { motion } from 'framer-motion';
 import './portfoliosubpage.css';
