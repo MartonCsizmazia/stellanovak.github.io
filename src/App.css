@@ -7,16 +7,16 @@ h3 {
 }
 
 .about-container {
-  margin-top: 6vw;
+  margin: 6vw 8% 0 8%;
   display: flex;
   justify-content: space-between;
+  gap: 5vw;
   text-align: left;
-  /* margin-bottom: 10rem; */
 }
 
 .about-text {
-  max-width: 40rem;
-  padding: 0 8% 8% 8%;
+  /* max-width: 40rem; */
+  max-width: 50vw;
 }
 
 .about-text p {
@@ -41,17 +41,19 @@ h3 {
 }
 
 .about-picture {
-  max-width: 30rem;
-  padding: 3.5% 12% 1.5% 4.5%;
+  /* max-width: 30rem; */
+  max-width: 42vw;
+  /* padding: 3.5% 12% 1.5% 4.5%; */
 }
 
 .about-me-link-container{
-  width: 5.8rem;
+  width: 8.8rem;
   display: block;
   text-decoration: none;
   color: white;
   transition: 0.2s ease-in-out;
   margin: 0 auto;
+  text-align: center;
 }
 
 .about-me-link{
@@ -123,17 +125,23 @@ h3 {
   margin-bottom: 3px;
 }
 
+@media screen and (max-width: 900px) {
+  .about-picture {
+    max-width: 30rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 750px) {
 
   .about-container {
     display: block;
     margin-top: 5rem;
-  }
-  .about-picture {
-    padding: 0;
-    margin: 0 12%;
-    width: auto;
-    max-width: 30rem;
   }
 
   .name-title {

@@ -1,14 +1,14 @@
 .about-container-sub {
-  padding-top: 10vw;
+  margin: 0vw 8% 0 8%;
   display: flex;
   justify-content: space-between;
+  gap: 5vw;
   text-align: left;
-  /* margin-bottom: 10rem; */
+  padding-top: 6rem;
 }
 
 .about-text {
-  max-width: 40rem;
-  padding: 0 8% 8% 8%;
+  max-width: 50vw;
   color: white;
 }
 
@@ -34,9 +34,14 @@
 }
 
 .about-picture-sub {
-  max-width: 30rem;
-  padding: 3.5% 12% 1.5% 4.5%;
+  max-width: 42vw;
+  /* padding: 3.5% 12% 1.5% 4.5%; */
 }
+
+.temp-image{
+  max-width: 42vw;
+}
+
 
 /* .about-me-link-container{
   width: 5.8rem;
@@ -57,22 +62,50 @@
 .about-me-link-container:hover{
   transform: scale(1.2);
 } */
+
+.hyperlink-in-aboutme{
+  color: aqua;
+}
+@media screen and (max-width: 1330px) {
+  .about-picture-sub {
+    transform: translatey(25%);
+  }
+}
 @media screen and (max-width: 900px) {
+
+  .about-container {
+    display: block;
+    margin-top: 5rem;
+  }
+
   .about-container-sub {
     display: block;
+
   }
 
   .about-me {
     font-size: 10vw;
   }
 
+  .about-text {
+    max-width: 100%;
+  }
+
   .about-text p {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   .about-picture-sub {
     max-width: 30rem;
     padding: 0;
     margin: 0 auto;
+    transform: none;
+  }
+
+  .temp-image{
+    max-width: 30rem;
+    padding: 0;
+    margin: 0 auto;
+    transform: none;
   }
 }
