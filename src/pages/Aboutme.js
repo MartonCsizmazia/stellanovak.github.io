@@ -5,7 +5,7 @@ import {useEffect} from 'react';
 import { useQuery } from "graphql-hooks";
 import { Image } from 'react-datocms';
 import './aboutme.css';
-import logo from './Elismeresek/DSC00556-01_318991180584136-02.jpeg';
+// import logo from './Elismeresek/DSC00556-01_318991180584136-02.jpeg';
 
 const Aboutme = () => {
 
