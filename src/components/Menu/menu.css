@@ -1,7 +1,7 @@
 #menu-bar {
   position: fixed;
   z-index: 1;
-  margin: 3rem 8% 3rem 3rem;
+  margin: 3rem 3vw 3rem 3rem;
   width: auto;
 
   font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
@@ -58,8 +58,12 @@ i {
 }
 
 .menu-title {
-  width: 12.5vw;
+  width: 11vw;
   text-align: center;
+}
+
+.flag-width{
+  width: 3rem;
 }
 
 .menu-title a {
@@ -116,7 +120,7 @@ i {
 
 .dropdown-content a {
   /* color: rgb(255, 255, 255); */
-  padding: 12px 16px;
+  padding: 5px 0px;
   text-decoration: none;
   display: block;
 }
@@ -185,7 +189,7 @@ i {
   }
 
   #flag{
-    width: 5rem;
+    width: 1rem;
   }
 
   #flag-picture {

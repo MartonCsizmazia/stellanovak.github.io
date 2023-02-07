@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
-  margin: 0 8%;
+  margin: 0 6vw;
 }
 
 .grid-item {

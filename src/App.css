@@ -7,7 +7,7 @@ h3 {
 }
 
 .about-container {
-  margin: 6vw 8% 0 8%;
+  margin: 6vw 6vw 0 6vw;
   display: flex;
   justify-content: space-between;
   gap: 5vw;
@@ -36,8 +36,10 @@ h3 {
   text-align: center;
 }
 
-.about-line {
+.about-line-main {
   margin-bottom: -1rem;
+  text-align: center;
+  font-size: 1.8vw !important;
 }
 
 .about-picture {
@@ -109,6 +111,11 @@ h3 {
 .contact-part{
   flex-grow: 1;
   flex: 1 1 0px;
+}
+
+.contact-part a{
+  text-decoration: none;
+  color: white;
 }
 
 .location-lines{

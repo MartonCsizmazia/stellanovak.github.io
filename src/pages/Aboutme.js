@@ -126,7 +126,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
                 ahol napi szinten jártam a közeli tájakra madarakat fotózni. Észre se vettem, de egy idő után minden reggel az erdővel "ébredtem" és már a legapróbb neszekre figyelve is megtaláltam a fák lombjai között bújkáló madarakat… Hatalmas örömmel fogadtam el a felkérést, a kiállítás pedig még 2023. Március 3-ig megtekinthető személyesen is. Az online kiállítás pedig itt elérhető:
 
 
-                  <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/.">   https://madar-tavlatbol.fenykepeszkor.hu/. </a></p>
+                  <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/." target="_blank">   https://madar-tavlatbol.fenykepeszkor.hu/. </a></p>
               <p language="hungarian" class="about-line"> Már gyermekkoromban kezdődött az érdeklődés a fényképezés világa iránt, komolyabban pedig 2015-ben kezdtem foglalkozni a fotózással.
                 2016-ban a Budapesti Corvinus Egyetem fotósa lettem, egy évvel később már a DRK márka által támogatott zenekarok koncertjeit fotóztam, majd a Károli Gáspár Református Egyetem sajtófotósaként is dolgoztam pár éven át. 2019 decemberében ért az egyik legnagyobb megtiszteltetés, amikor a FINA felkért, hogy résztvegyek a kuwaiti junior vízilabda világbajnokságon a rendezvény hivatalos fotósaként.
 
@@ -136,7 +136,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
                 ahol napi szinten jártam a közeli tájakra madarakat fotózni. Észre se vettem, de egy idő után minden reggel az erdővel "ébredtem" és már a legapróbb neszekre figyelve is megtaláltam a fák lombjai között bújkáló madarakat… Hatalmas örömmel fogadtam el a felkérést, a kiállítás pedig még 2023. Március 3-ig megtekinthető személyesen is. Az online kiállítás pedig itt elérhető:
 
 
-                  <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/.">  https://madar-tavlatbol.fenykepeszkor.hu/. </a></p>
+                  <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/." target="_blank">  https://madar-tavlatbol.fenykepeszkor.hu/. </a></p>
               <br></br>
             </p>
           </article>
@@ -223,11 +223,11 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
           <article>
             <p>
               <p language="english" class="about-line"> 2023. Február: A Tihanyi Apátsági Rege Cukrászdában felkértek az első nagyszabású önálló kiállításomra.
-                <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/."> https://madar-tavlatbol.fenykepeszkor.hu/. </a>
+                <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/." target="_blank"> https://madar-tavlatbol.fenykepeszkor.hu/. </a>
 
               </p>
               <p language="hungarian" class="about-line"> 2023. Február: A Tihanyi Apátsági Rege Cukrászdában felkértek az első nagyszabású önálló kiállításomra.
-                <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/."> https://madar-tavlatbol.fenykepeszkor.hu/. </a>
+                <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/." target="_blank"> https://madar-tavlatbol.fenykepeszkor.hu/. </a>
 
               </p>
               <br></br>

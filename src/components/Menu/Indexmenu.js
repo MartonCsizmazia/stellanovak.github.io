@@ -64,7 +64,7 @@ const Indexmenu = (props) => {
         {/* <a language="english" href="/#contact" >Contact</a>
         <a language="hungarian" href="/#contact" >Kapcsolat</a> */}
       </div>
-      <div className="menu-title" id = "flag" onClick={switchLang}>
+      <div className="menu-title flag-width" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
         <img language="hungarian" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>
       </div>
@@ -82,7 +82,7 @@ const Indexmenu = (props) => {
 }
 const MenuStyles = {
   flagPicture:{
-    height: "2vw",
+    height: "1.5vw",
     cursor: "pointer",
     margin: "0 auto"
   }

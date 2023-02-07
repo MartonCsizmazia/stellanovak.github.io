@@ -187,10 +187,10 @@ function App() {
 
           <article>
             <p>
-              <p language="english" class="about-line">Most of all, emotions and moments fascinate me in the field of photography. My goal is for my pictures to tell stories, and I want people to feel like they are part of the moment when they look at my photos.
+              <p language="english" class="about-line-main">Most of all, emotions and moments fascinate me in the field of photography. My goal is for my pictures to tell stories, and I want people to feel like they are part of the moment when they look at my photos.
                 I consider myself a documentary photographer, I was never really attracted to the world of staged images, I was always looking for actions, small hidden moments. With me, a photo shoot takes place in a non-stressful, completely relaxed atmosphere, so the most natural pictures can be taken of everyone.</p>
 
-              <p language="hungarian" class="about-line"> Leginkább az érzelmek, mozzanatok nyűgöznek le a fotózás terén. Célom, hogy képeim történeteket meséljenek el, s szeretném, hogy az emberek a fotóimra nézve úgy érezzék, ők is részesei a pillanatnak.
+              <p language="hungarian" class="about-line-main"> Leginkább az érzelmek, mozzanatok nyűgöznek le a fotózás terén. Célom, hogy képeim történeteket meséljenek el, s szeretném, hogy az emberek a fotóimra nézve úgy érezzék, ők is részesei a pillanatnak.
                 Dokumentarista fotósnak tartom magam, soha nem vonzott igazán a beállított képek világa, mindig az akciókat, a rejtett kis pillanatokat kerestem. Nálam egy fotózás nem stresszes, teljesen oldott hangulatban folyik, így mindenkiről a legtermészetesebb képek születhetnek meg.</p>
               <br></br>
             </p>
@@ -232,26 +232,32 @@ function App() {
               <div id="contact-info">
                 <div className='contact-part'>
                   <FontAwesomeIcon icon={faLocationDot} className="fa-icon"/>
-                    <p className='location-lines'>
+                    <p language="english" className='location-lines'>
                       <p> Stella Novak </p>
                       <p> Photographer </p>
                       <p> based in Budapest </p>
+                    </p>
+                    <p language="hungarian" className='location-lines'>
+                      <p> Novák Eszter </p>
+                      <p> Fotográfus </p>
+                      <p> Budapest </p>
                     </p>
                 </div>
 
                 <div className='contact-part'>
                   <FontAwesomeIcon icon={faPhone} className="fa-icon"/>
-                  <p> Phone: 123-456-78901 </p>
+                  <p language="english"> Phone: +36301712370 </p>
+                  <p language="hungarian"> Telefon: +36301712370 </p>
                 </div>
 
                 <div className='contact-part'>
                   <FontAwesomeIcon icon={faEnvelope} className="fa-icon"/>
-                  <p> Email: info@stellanovak.com </p>
+                  <p> Email: stellanphoto@gmail.com </p>
                 </div>
 
                 <div className='contact-part'>
                 <FontAwesomeIcon icon={faInstagram} className="fa-icon"/>
-                  <p> Instagram: info@stellanovak.com </p>
+                  <p> <a href="https://www.instagram.com/nesztiii/" aria-label="Instagram">Instagram: @stellanphoto</a></p>
                 </div>
               </div>
             </div>
