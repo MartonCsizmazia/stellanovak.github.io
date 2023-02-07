@@ -8,12 +8,11 @@
 }
 
 .about-text {
-  max-width: 50vw;
+  max-width: 45vw;
   color: white;
 }
 
 .about-text p {
-  /* color: white; */
   font: normal normal normal 1.6rem/1.4em helvetica-w01-light,
     helvetica-w02-light, sans-serif;
   font-size: 1rem;
@@ -35,40 +34,43 @@
 
 .about-picture-sub {
   max-width: 42vw;
-  /* padding: 3.5% 12% 1.5% 4.5%; */
+  padding-top: 6rem;
 }
 
 .temp-image{
   max-width: 42vw;
 }
 
-
-/* .about-me-link-container{
-  width: 5.8rem;
-  display: block;
-  text-decoration: none;
-  color: white;
-  transition: 0.2s ease-in-out;
-  margin: 0 auto;
-}
-
-.about-me-link{
-  border: 2px solid white;
-  border-radius: 12px;
-  padding: 5px;
-  display: block;
-}
-
-.about-me-link-container:hover{
-  transform: scale(1.2);
-} */
-
 .hyperlink-in-aboutme{
-  color: aqua;
+  color: rgb(206, 206, 206);
+  font-style: italic;
 }
-@media screen and (max-width: 1330px) {
+
+.small-article-container{
+  padding-top: 4rem;
+}
+
+.right-article-container{
+  flex-direction: row-reverse;
+}
+
+.left-article{
+  color: white;
+  transform: translatey(25%);
+}
+
+@media screen and (max-width: 1200px) {
   .about-picture-sub {
     transform: translatey(25%);
+    padding-top: 0rem
+  }
+
+  .aknowledgement-picture-sub {
+    padding-top: 0rem
+  }
+
+  .right-picture{
+    transform: none
   }
 }
 @media screen and (max-width: 900px) {
@@ -93,6 +95,7 @@
 
   .about-text p {
     font-size: 3vw;
+    text-justify: auto;
   }
 
   .about-picture-sub {
@@ -102,10 +105,7 @@
     transform: none;
   }
 
-  .temp-image{
-    max-width: 30rem;
-    padding: 0;
-    margin: 0 auto;
-    transform: none;
+  .left-article{
+    margin-bottom: 2rem;
   }
 }

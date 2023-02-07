@@ -58,11 +58,9 @@ h3 {
 
 .about-me-link{
   border: 2px solid white;
-  /* display: inline-block; */
   border-radius: 12px;
   padding: 5px;
   display: block;
-  /* margin: 0 auto; */
 }
 
 .about-me-link-container:hover{
@@ -94,9 +92,6 @@ h3 {
 }
 
 #contact-info {
-  /* text-align: center;
-  font-size: 1.3rem;
-  margin: 3rem 0; */
   display: flex;
   justify-content:space-evenly;
   text-align: center;
@@ -130,6 +125,7 @@ h3 {
     max-width: 30rem;
     padding: 0;
     margin: 0 auto;
+    padding-top: 3rem;
   }
 
   .about-text {

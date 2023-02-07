@@ -187,15 +187,11 @@ function App() {
 
           <article>
             <p>
-              {/* <p language="english" class="about-line">heeeyooooo</p>
-              <p language="hungarian" class="about-line">haliho</p>
-              <br></br> */}
               <p language="english" class="about-line">Most of all, emotions and moments fascinate me in the field of photography. My goal is for my pictures to tell stories, and I want people to feel like they are part of the moment when they look at my photos.
-I consider myself a documentary photographer, I was never really attracted to the world of staged images, I was always looking for actions, small hidden moments. With me, a photo shoot takes place in a non-stressful, completely relaxed atmosphere, so the most natural pictures can be taken of everyone.</p>
-              {/* <p language="hungarian" class="about-line">{data.allAboutmes[0].aboutme.customData.aboutmetext}</p> */}
+                I consider myself a documentary photographer, I was never really attracted to the world of staged images, I was always looking for actions, small hidden moments. With me, a photo shoot takes place in a non-stressful, completely relaxed atmosphere, so the most natural pictures can be taken of everyone.</p>
 
               <p language="hungarian" class="about-line"> Leginkább az érzelmek, mozzanatok nyűgöznek le a fotózás terén. Célom, hogy képeim történeteket meséljenek el, s szeretném, hogy az emberek a fotóimra nézve úgy érezzék, ők is részesei a pillanatnak.
-Dokumentarista fotósnak tartom magam, soha nem vonzott igazán a beállított képek világa, mindig az akciókat, a rejtett kis pillanatokat kerestem. Nálam egy fotózás nem stresszes, teljesen oldott hangulatban folyik, így mindenkiről a legtermészetesebb képek születhetnek meg.</p>
+                Dokumentarista fotósnak tartom magam, soha nem vonzott igazán a beállított képek világa, mindig az akciókat, a rejtett kis pillanatokat kerestem. Nálam egy fotózás nem stresszes, teljesen oldott hangulatban folyik, így mindenkiről a legtermészetesebb képek születhetnek meg.</p>
               <br></br>
             </p>
               <Link to={"/aboutme"} className='about-me-link-container'>
@@ -272,8 +268,6 @@ const AppStyles = {
     pagewidth: {
       maxWidth: "120rem",
       margin: "0 auto",
-      // backgroundColor: "#fafafa",
-      // color: "#333"
       backgroundColor: "black",
       color: "white"
     },
@@ -311,7 +305,6 @@ const AppStyles = {
     },
     impressum: {
       position: "bottom",
-      // color: "white",
       bottom: "0",
       left: "0",
       fontSize: "17px"
