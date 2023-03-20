@@ -6,8 +6,12 @@ h3 {
   /* color: white; */
 }
 
+.image {
+  max-width: none !important;
+}
+
 .about-container {
-  margin: 6vw 6vw 0 6vw;
+  margin: 10vw 6vw 0 6vw;
   display: flex;
   justify-content: space-between;
   gap: 5vw;
@@ -56,6 +60,7 @@ h3 {
   transition: 0.2s ease-in-out;
   margin: 0 auto;
   text-align: center;
+  transform: scale(1.2);
 }
 
 .about-me-link{
@@ -66,7 +71,7 @@ h3 {
 }
 
 .about-me-link-container:hover{
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 .services-container{
@@ -137,6 +142,10 @@ h3 {
 
   .about-text {
     max-width: 100%;
+  }
+
+  .about-line-main {
+    font-size: 1rem !important;
   }
 }
 

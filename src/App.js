@@ -277,7 +277,6 @@ const AppStyles = {
       backgroundColor: "black",
       color: "white"
     },
-
     canvas: {
       display: "block",
       width: "100%",
