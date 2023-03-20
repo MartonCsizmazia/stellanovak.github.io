@@ -148,7 +148,7 @@ function App() {
     >
 
       <Helmet>
-        <title>Novák Eszter Photography</title>
+        <title>Stella Novak - Photographer</title>
         <link rel="icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/basic-ui-vol-2-32-px/32/ui-photo-picture-camera-512.png"/>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <meta name="keywords" content="fotózás, Novák Eszter, profi fotós, profi képek, photography, stella novak, photoshoot, professional photographer"/>

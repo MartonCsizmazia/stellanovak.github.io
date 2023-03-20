@@ -89,13 +89,18 @@ h3 {
 
 .contact-container{
   margin-top: 7rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
-.contact-header,
 .services-title {
   text-align: center;
   font-size: 4rem;
+}
+
+.contact-header {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 8rem;
 }
 
 #contact-info {
@@ -187,4 +192,9 @@ h3 {
   .contact-container{
     margin-top: 5rem;
   }
+
+  .contact-header {
+    margin-bottom: 4rem;
+  }
+
 }

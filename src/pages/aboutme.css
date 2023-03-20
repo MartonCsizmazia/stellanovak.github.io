@@ -39,6 +39,10 @@
   padding-top: 6rem;
 }
 
+.aknowledgement-picture-sub {
+  width: 80%;
+}
+
 .temp-image{
   max-width: 42vw;
 }
@@ -93,6 +97,10 @@
 
   .about-text {
     max-width: 100%;
+  }
+
+  .about-line {
+    font-size: 0.8rem !important;
   }
 
   .about-text p {

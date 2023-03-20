@@ -83,8 +83,13 @@ i {
   justify-content:space-evenly;
 }
 
+.social-media-icons {
+  margin-left: 8px;
+  width: 7vw;
+}
+
 .social-media-icons div {
-  margin: 0rem 1rem;
+
 }
 
 .social-media-icons-mobile div {
