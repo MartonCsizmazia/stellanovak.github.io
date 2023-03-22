@@ -207,9 +207,10 @@ function App() {
 
       <a id="portfolio" ></a>
       <Portfolio setAllLanguage={setAllLanguage}/>
-      <a id="services" ></a>
+
         <section>
           <div class="services-container">
+          <a id="services">services id</a>
             <div className='services-title-holder'>
               <h1 language="english" class="services-title"> Services </h1>
               <h1 language="hungarian" class="services-title"> Szolgáltatások </h1>
@@ -263,7 +264,7 @@ function App() {
             </div>
           </div>
         </section>
-      <div className="impressum" style={AppStyles.impressum}>
+      <div id="impressum" style={AppStyles.impressum}>
         @Website made by Csizmazia Márton, 2023
       </div>
     </motion.div>

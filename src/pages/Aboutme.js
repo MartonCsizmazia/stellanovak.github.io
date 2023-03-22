@@ -147,7 +147,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
       </div>
 
 {/* ///////////////////////////////////////////////////////// */}
-
+    <div className="aknowledgements">
       <div class="about-container-sub small-article-container right-article-container">
         <div class="about-text-article left-article">
           <article>
@@ -238,7 +238,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
           <Image data={data.allAknowledgements[0].aknowledgement[4].responsiveImage} />
         </div>
       </div>
-
+    </div>
     </motion.div>
   )
 }

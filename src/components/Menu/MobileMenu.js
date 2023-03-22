@@ -96,16 +96,16 @@ let sidenavStyle = {
           ))}
         </div>
 
-        {/* <HashLink smooth to={"/#services"}>
+        <HashLink to={"/#services"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Services</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Szolgáltatások</span>
         </HashLink>
 
 
-        <HashLink smooth to={"/#contact"}>
+        <HashLink to={"/#contact"}>
           <span language="english" className="page-part" onClick={closeMenuBar}>Contact</span>
           <span language="hungarian" className="page-part" onClick={closeMenuBar}>Kapcsolat</span>
-        </HashLink> */}
+        </HashLink>
 
         <div className= "mobile-flag" onClick={switchLang}>
           <img language="english" style={MobilemenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>

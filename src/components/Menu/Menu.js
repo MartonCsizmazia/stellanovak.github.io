@@ -52,18 +52,18 @@ const Menu = (props) => {
           ))}
         </div>
       </div>
-      {/* <div className="menu-title">
-        <HashLink smooth to={"/#services"}>
+      <div className="menu-title">
+        <HashLink to={"/#impressum"}>
           <a language="english" >Services</a>
           <a language="hungarian"  >Szolgáltatások</a>
         </HashLink>
       </div>
       <div className="menu-title">
-        <HashLink smooth to={"/#contact"}>
+        <HashLink to={"/#impressum"}>
           <a language="english"  >Contact</a>
           <a language="hungarian"  >Kapcsolat</a>
         </HashLink>
-      </div> */}
+      </div>
       <div className="menu-title flag-width" id = "flag" onClick={switchLang}>
         <img language="english" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar nyelvű oldal" ></img>
         <img language="hungarian" style={MenuStyles.flagPicture} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png" alt="Change to english"></img>

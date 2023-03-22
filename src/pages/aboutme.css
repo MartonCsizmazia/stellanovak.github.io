@@ -65,6 +65,10 @@
   transform: translatey(25%);
 }
 
+.aknowledgements{
+  margin-bottom: 6rem;
+}
+
 @media screen and (max-width: 1200px) {
   .about-picture-sub {
     transform: translatey(25%);
@@ -100,11 +104,10 @@
   }
 
   .about-line {
-    font-size: 0.8rem !important;
+    font-size: 0.9rem !important;
   }
 
   .about-text p {
-    font-size: 3vw;
     text-justify: auto;
   }
 
@@ -117,5 +120,9 @@
 
   .left-article{
     margin-bottom: 2rem;
+  }
+
+  .aknowledgement-picture-sub {
+    margin: 0 auto;
   }
 }
