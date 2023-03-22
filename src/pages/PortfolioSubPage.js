@@ -129,7 +129,7 @@ const PortfolioSubPage = (props) => {
       <MobileMenu menuList={portfolioTitles} switchLang={setAllLanguage} openMenuBar={openMenuBar} closeMenuBar={closeMenuBar}/>
 
       <div style={PortfolioSubPageStyles.responsiveMasonry}>
-        <div style={PortfolioSubPageStyles.portfolioTitle}>
+        <div className='portfolio-title' style={PortfolioSubPageStyles.portfolioTitle}>
           <span language="english">{subPageName}</span>
           <span language="hungarian">{hunSubPageName}</span>
         </div>
