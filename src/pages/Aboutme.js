@@ -117,22 +117,24 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
 
           <article>
             <p>
-              <p language="english" class="about-line">Coming soon in english! <br></br><br></br>Már gyermekkoromban kezdődött az érdeklődés a fényképezés világa iránt, komolyabban pedig 2015-ben kezdtem foglalkozni a fotózással.
-                2016-ban a Budapesti Corvinus Egyetem fotósa lettem, egy évvel később már a DRK márka által támogatott zenekarok koncertjeit fotóztam, majd a Károli Gáspár Református Egyetem sajtófotósaként is dolgoztam pár éven át. 2019 decemberében ért az egyik legnagyobb megtiszteltetés, amikor a FINA felkért, hogy résztvegyek a kuwaiti junior vízilabda világbajnokságon a rendezvény hivatalos fotósaként.
+              <p language="english" class="about-line">Coming soon in english! <br></br><br></br>
+                Már gyermekkoromban kezdődött az érdeklődés a fényképezés világa iránt, komolyabban pedig 2015-ben kezdtem foglalkozni a fotózással.
+                <br/> 2016-ban a Budapesti Corvinus Egyetem fotósa lettem, egy évvel később már a DRK márka által támogatott zenekarok koncertjeit fotóztam, majd a Károli Gáspár Református Egyetem sajtófotósaként is dolgoztam pár éven át. 2019 decemberében ért az egyik legnagyobb megtiszteltetés, amikor a FINA felkért, hogy résztvegyek a kuwaiti junior vízilabda világbajnokságon a rendezvény hivatalos fotósaként.
 
-                A nagyobb munkáim mellett esküvőket, portrékat, családokat és állatokat is nagyon sokat fotóztam. Az évek alatt rájöttem, hogy nagyon élvezem a "kalandosabb" munkák mellett ezeket a privátabb eseményeket is, ugyanis olyan fényképeket tudok átadni az ügyfeleimnek, melyeket nagy boldogsággal és szeretettel nézhetnek éveken át.
+                <br/><br/>A nagyobb munkáim mellett esküvőket, portrékat, családokat és állatokat is nagyon sokat fotóztam. Az évek alatt rájöttem, hogy nagyon élvezem a "kalandosabb" munkák mellett ezeket a privátabb eseményeket is, ugyanis olyan fényképeket tudok átadni az ügyfeleimnek, melyeket nagy boldogsággal és szeretettel nézhetnek éveken át.
 
-                Idén decemberben ért egy újabb hatalmas megtiszteltetés, a Tihanyi Apátsági Rege Cukrászdába felkértek egy egész hónapos nagyszabású önálló kiállításra táj és madár fotókkal. A természet egész életemben vonzott és közel állt hozzám, kirándulások alkalmával a gépem mindig a táskámban lapult, hogy megörökíthessem a bebarangolt tájakat. Tavaly december végén kiköltöztem Hollandiába 4 hónapra,
+                <br/><br/>Idén decemberben ért egy újabb hatalmas megtiszteltetés, a Tihanyi Apátsági Rege Cukrászdába felkértek egy egész hónapos nagyszabású önálló kiállításra táj és madár fotókkal. A természet egész életemben vonzott és közel állt hozzám, kirándulások alkalmával a gépem mindig a táskámban lapult, hogy megörökíthessem a bebarangolt tájakat. Tavaly december végén kiköltöztem Hollandiába 4 hónapra,
                 ahol napi szinten jártam a közeli tájakra madarakat fotózni. Észre se vettem, de egy idő után minden reggel az erdővel "ébredtem" és már a legapróbb neszekre figyelve is megtaláltam a fák lombjai között bújkáló madarakat… Hatalmas örömmel fogadtam el a felkérést, a kiállítás pedig még 2023. Március 3-ig megtekinthető személyesen is. Az online kiállítás pedig itt elérhető:
 
 
                   <a class="hyperlink-in-aboutme" href="https://madar-tavlatbol.fenykepeszkor.hu/." target="_blank">   https://madar-tavlatbol.fenykepeszkor.hu/. </a></p>
-              <p language="hungarian" class="about-line"> Már gyermekkoromban kezdődött az érdeklődés a fényképezés világa iránt, komolyabban pedig 2015-ben kezdtem foglalkozni a fotózással.
-                2016-ban a Budapesti Corvinus Egyetem fotósa lettem, egy évvel később már a DRK márka által támogatott zenekarok koncertjeit fotóztam, majd a Károli Gáspár Református Egyetem sajtófotósaként is dolgoztam pár éven át. 2019 decemberében ért az egyik legnagyobb megtiszteltetés, amikor a FINA felkért, hogy résztvegyek a kuwaiti junior vízilabda világbajnokságon a rendezvény hivatalos fotósaként.
+              <p language="hungarian" class="about-line">
+                Már gyermekkoromban kezdődött az érdeklődés a fényképezés világa iránt, komolyabban pedig 2015-ben kezdtem foglalkozni a fotózással.
+                <br/> 2016-ban a Budapesti Corvinus Egyetem fotósa lettem, egy évvel később már a DRK márka által támogatott zenekarok koncertjeit fotóztam, majd a Károli Gáspár Református Egyetem sajtófotósaként is dolgoztam pár éven át. 2019 decemberében ért az egyik legnagyobb megtiszteltetés, amikor a FINA felkért, hogy résztvegyek a kuwaiti junior vízilabda világbajnokságon a rendezvény hivatalos fotósaként.
 
-                A nagyobb munkáim mellett esküvőket, portrékat, családokat és állatokat is nagyon sokat fotóztam. Az évek alatt rájöttem, hogy nagyon élvezem a "kalandosabb" munkák mellett ezeket a privátabb eseményeket is, ugyanis olyan fényképeket tudok átadni az ügyfeleimnek, melyeket nagy boldogsággal és szeretettel nézhetnek éveken át.
+                <br/><br/> A nagyobb munkáim mellett esküvőket, portrékat, családokat és állatokat is nagyon sokat fotóztam. Az évek alatt rájöttem, hogy nagyon élvezem a "kalandosabb" munkák mellett ezeket a privátabb eseményeket is, ugyanis olyan fényképeket tudok átadni az ügyfeleimnek, melyeket nagy boldogsággal és szeretettel nézhetnek éveken át.
 
-                Idén decemberben ért egy újabb hatalmas megtiszteltetés, a Tihanyi Apátsági Rege Cukrászdába felkértek egy egész hónapos nagyszabású önálló kiállításra táj és madár fotókkal. A természet egész életemben vonzott és közel állt hozzám, kirándulások alkalmával a gépem mindig a táskámban lapult, hogy megörökíthessem a bebarangolt tájakat. Tavaly december végén kiköltöztem Hollandiába 4 hónapra,
+                <br/><br/> Idén decemberben ért egy újabb hatalmas megtiszteltetés, a Tihanyi Apátsági Rege Cukrászdába felkértek egy egész hónapos nagyszabású önálló kiállításra táj és madár fotókkal. A természet egész életemben vonzott és közel állt hozzám, kirándulások alkalmával a gépem mindig a táskámban lapult, hogy megörökíthessem a bebarangolt tájakat. Tavaly december végén kiköltöztem Hollandiába 4 hónapra,
                 ahol napi szinten jártam a közeli tájakra madarakat fotózni. Észre se vettem, de egy idő után minden reggel az erdővel "ébredtem" és már a legapróbb neszekre figyelve is megtaláltam a fák lombjai között bújkáló madarakat… Hatalmas örömmel fogadtam el a felkérést, a kiállítás pedig még 2023. Március 3-ig megtekinthető személyesen is. Az online kiállítás pedig itt elérhető:
 
 
@@ -160,7 +162,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
             </p>
           </article>
         </div>
-        <div class="aknowledgement-picture-sub right-picture">
+        <div class="aknowledgement-picture-sub ">
           <Image data={data.allAknowledgements[0].aknowledgement[3].responsiveImage} />
         </div>
       </div>
@@ -195,7 +197,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
             </p>
           </article>
         </div>
-        <div class="aknowledgement-picture-sub right-picture">
+        <div class="aknowledgement-picture-sub ">
           <Image data={data.allAknowledgements[0].aknowledgement[2].responsiveImage} />
         </div>
       </div>
@@ -234,7 +236,7 @@ let hunPortfolioTitles = data.allPortfolios[0].portfolio
             </p>
           </article>
         </div>
-        <div class="aknowledgement-picture-sub right-picture">
+        <div class="aknowledgement-picture-sub ">
           <Image data={data.allAknowledgements[0].aknowledgement[4].responsiveImage} />
         </div>
       </div>

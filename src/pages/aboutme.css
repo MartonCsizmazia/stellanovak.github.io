@@ -33,6 +33,7 @@
 .about-line {
   margin-bottom: -1rem;
   text-align: center;
+
 }
 
 .about-picture-sub {
@@ -41,7 +42,11 @@
 }
 
 .aknowledgement-picture-sub {
-  width: 80%;
+
+}
+
+.aknowledgement-picture-sub img{
+  width: 80% !important;
 }
 
 .temp-image{
@@ -57,6 +62,11 @@
   padding-top: 4rem;
 }
 
+.right-picture{
+  transform: translateX(20%);
+}
+
+
 .right-article-container{
   flex-direction: row-reverse;
 }
@@ -64,6 +74,7 @@
 .left-article{
   color: white;
   transform: translatey(25%);
+  width: 100%;
 }
 
 .aknowledgements{
@@ -80,9 +91,6 @@
     padding-top: 0rem
   }
 
-  .right-picture{
-    transform: none
-  }
 }
 @media screen and (max-width: 900px) {
 
@@ -123,7 +131,11 @@
     margin-bottom: 2rem;
   }
 
-  .aknowledgement-picture-sub {
-    margin: 0 auto;
+  .right-picture{
+    transform: none;
+  }
+
+  .aknowledgement-picture-sub img{
+    transform: translateX(12%) !important;
   }
 }
