@@ -262,6 +262,10 @@ h3 {
   .column {
     width: 50%;
   }
+
+  .card-text{
+    font-size: 4.5vw;
+  }
 }
 
 @media screen and (max-width: 350px) {
