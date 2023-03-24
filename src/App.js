@@ -237,6 +237,7 @@ function App() {
             <div className='services-card-holder'>
               <div class="row">
                 {data.allServices[0].service
+                  .sort((a, b) => a.customData.custom_order - b.customData.custom_order)
                   .map((image, i) => (
                     <div class="column">
                       <div class="card">
