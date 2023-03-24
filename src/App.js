@@ -192,7 +192,7 @@ function App() {
       </div>
 
       <div class="about-container">
-      <a id="aboutme" ></a>
+      <a id="aboutme" >about me id</a>
         <div class="about-text">
           <h1 language="english" class="about-me">About me </h1>
           <h1 language="hungarian" class="about-me">Rólam </h1>
