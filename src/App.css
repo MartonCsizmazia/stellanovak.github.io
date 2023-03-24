@@ -88,7 +88,50 @@ h3 {
 }
 
 .services-card-holder {
-  height: 10rem;
+  /* height: 10rem; */
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+}
+
+.card-image-holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22vw;
+}
+
+.card-image{
+  transform: scale(0.8);
+}
+
+.card-text{
+  position: relative;
+  font-size: 2.2vw;
 }
 
 .contact-container{
@@ -175,6 +218,14 @@ h3 {
   font-size: 3rem;
 }
 
+  .column {
+    width: 33%;
+  }
+
+  .card-text{
+    font-size: 3vw;
+  }
+
   #contact-info {
     display: block;
     text-align: center;
@@ -201,4 +252,33 @@ h3 {
     margin-bottom: 4rem;
   }
 
+}
+
+@media screen and (max-width: 600px) {
+  .card-image-holder{
+    height: 38vw;
+  }
+
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .column {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .card-image-holder{
+    height: 55vw;
+  }
+
+  .card-image{
+    transform: scale(0.6);
+  }
+
+  .card-text{
+    font-size: 4vw;
+  }
 }

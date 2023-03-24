@@ -45,6 +45,18 @@ const HOMEPAGE_QUERY = `query HomePage {
       }
     }
   }
+  allServices {
+    service {
+      filename
+      title
+      customData
+      responsiveImage {
+        src
+        height
+        width
+      }
+    }
+  }
 }`;
 
 function App() {
@@ -219,10 +231,33 @@ function App() {
               <h1 language="hungarian" class="services-title"> Szolgáltatások </h1>
             </div>
             <div className='services-text-holder'>
-            <h1 language="english" class="services-text"> Coming soon! </h1>
-              <h1 language="hungarian" class="services-text"> Hamarosan! </h1>
+            <h1 language="english" class="services-text"> </h1>
+            <h1 language="hungarian" class="services-text"> </h1>
             </div>
-            <div className='services-card-holder'></div>
+            <div className='services-card-holder'>
+              <div class="row">
+                {data.allServices[0].service
+                  .map((image, i) => (
+                    <div class="column">
+                      <div class="card">
+                        <div class="card-image-holder">
+                          <img
+                                key={i}
+                                src={image.responsiveImage.src}
+                                style={{width: "100%", display: "block"}}
+                                alt={image.title}
+                                className={"card-image"}
+                            />
+                          </div>
+                        <p className={"card-text"}>
+                          <div language="hungarian" >{image.customData.hungarian}</div>
+                          <div language="english" >{image.title}</div>
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
           </div>
         </section>
       <a id="contact" ></a>
