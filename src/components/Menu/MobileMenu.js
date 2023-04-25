@@ -113,10 +113,10 @@ let sidenavStyle = {
         </div>
         <div className="social-media-icons-mobile">
           <div >
-            <a href="https://www.facebook.com/stellanovakphoto" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF}/></a>
+            <a href="https://www.facebook.com/stellanphoto" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF}/></a>
           </div>
           <div >
-            <a href="https://www.instagram.com/nesztiii/" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram}/></a>
+            <a href="https://www.instagram.com/stellanphoto/" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram}/></a>
           </div>
         </div>
       </div>
